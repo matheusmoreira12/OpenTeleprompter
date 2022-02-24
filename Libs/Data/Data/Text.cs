@@ -3,12 +3,12 @@
     public class Text
     {
         public readonly byte[] Characters;
-        public readonly TextFormat Format;
+        public readonly TextStyle Style;
 
-        public Text(byte[] characters, TextFormat format)
+        public Text(byte[] characters, TextStyle style)
         {
             Characters = characters;
-            Format = format;
+            Style = style;
         }
     }
 }

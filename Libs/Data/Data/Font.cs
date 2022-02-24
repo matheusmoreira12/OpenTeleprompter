@@ -2,11 +2,11 @@
 {
     public class Font
     {
-        public Font(FontGlyph[] glyph)
+        public Font(FontGlyph[] glyphs)
         {
-            Glyph = glyph;
+            Glyphs = glyphs;
         }
 
-        public readonly FontGlyph[] Glyph;
+        public readonly FontGlyph[] Glyphs;
     }
 }

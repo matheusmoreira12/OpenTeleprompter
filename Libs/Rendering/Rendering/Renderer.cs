@@ -1,17 +1,16 @@
 ﻿using Gdk;
 
-namespace Rendering
+namespace OpenTeleprompter.Rendering
 {
     public abstract class Renderer<Tsource>
     {
-        protected internal Renderer(Tsource source, DrawingContext drawingContext)
+        protected internal Renderer(Tsource source)
         {
             Source = source;
-            DrawingContext = drawingContext;
         }
 
-        protected readonly Tsource Source;
+        public abstract void Render(DrawingContext context);
 
-        protected readonly DrawingContext DrawingContext;
+        protected readonly Tsource Source;
     }
 }

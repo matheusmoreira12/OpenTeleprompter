@@ -1,16 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.ItemProperties.Rendering FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Rendering/Renderer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Rendering/TextRenderer.cs">
     <Files>
-      <File FileName="Rendering/Renderer.cs" Line="6" Column="24" />
+      <File FileName="Rendering/Renderer.cs" Line="13" Column="1" />
+      <File FileName="Rendering/PageRenderer.cs" Line="14" Column="53" />
+      <File FileName="Rendering/TextRenderer.cs" Line="19" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Rendering" expanded="True">
             <Node name="Rendering" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="Renderer.cs" selected="True" />
+              <Node name="Dependencies" expanded="True">
+                <Node name="AssemblyDependencies" expanded="True" />
+                <Node name="PackageDependencies" expanded="True" />
+                <Node name="SdkDependencies" expanded="True" />
+              </Node>
+              <Node name="TextRenderer.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -18,7 +23,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
