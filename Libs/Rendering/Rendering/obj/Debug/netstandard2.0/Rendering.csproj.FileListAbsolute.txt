@@ -1,0 +1,9 @@
+/home/fortes/Projects/OpenTeleprompter/Libs/Rendering/Rendering/bin/Debug/netstandard2.0/Rendering.deps.json
+/home/fortes/Projects/OpenTeleprompter/Libs/Rendering/Rendering/bin/Debug/netstandard2.0/Rendering.dll
+/home/fortes/Projects/OpenTeleprompter/Libs/Rendering/Rendering/bin/Debug/netstandard2.0/Rendering.pdb
+/home/fortes/Projects/OpenTeleprompter/Libs/Rendering/Rendering/obj/Debug/netstandard2.0/Rendering.csprojAssemblyReference.cache
+/home/fortes/Projects/OpenTeleprompter/Libs/Rendering/Rendering/obj/Debug/netstandard2.0/Rendering.AssemblyInfoInputs.cache
+/home/fortes/Projects/OpenTeleprompter/Libs/Rendering/Rendering/obj/Debug/netstandard2.0/Rendering.AssemblyInfo.cs
+/home/fortes/Projects/OpenTeleprompter/Libs/Rendering/Rendering/obj/Debug/netstandard2.0/Rendering.csproj.CoreCompileInputs.cache
+/home/fortes/Projects/OpenTeleprompter/Libs/Rendering/Rendering/obj/Debug/netstandard2.0/Rendering.dll
+/home/fortes/Projects/OpenTeleprompter/Libs/Rendering/Rendering/obj/Debug/netstandard2.0/Rendering.pdb

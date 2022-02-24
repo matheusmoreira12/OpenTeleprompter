@@ -1,0 +1,9 @@
+/home/fortes/Projects/OpenTeleprompter/Libs/Data/Data/bin/Debug/netstandard2.0/Data.deps.json
+/home/fortes/Projects/OpenTeleprompter/Libs/Data/Data/bin/Debug/netstandard2.0/Data.dll
+/home/fortes/Projects/OpenTeleprompter/Libs/Data/Data/bin/Debug/netstandard2.0/Data.pdb
+/home/fortes/Projects/OpenTeleprompter/Libs/Data/Data/obj/Debug/netstandard2.0/Data.csprojAssemblyReference.cache
+/home/fortes/Projects/OpenTeleprompter/Libs/Data/Data/obj/Debug/netstandard2.0/Data.AssemblyInfoInputs.cache
+/home/fortes/Projects/OpenTeleprompter/Libs/Data/Data/obj/Debug/netstandard2.0/Data.AssemblyInfo.cs
+/home/fortes/Projects/OpenTeleprompter/Libs/Data/Data/obj/Debug/netstandard2.0/Data.csproj.CoreCompileInputs.cache
+/home/fortes/Projects/OpenTeleprompter/Libs/Data/Data/obj/Debug/netstandard2.0/Data.dll
+/home/fortes/Projects/OpenTeleprompter/Libs/Data/Data/obj/Debug/netstandard2.0/Data.pdb

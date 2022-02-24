@@ -1,0 +1,29 @@
+﻿<Properties>
+  <MonoDevelop.Ide.ItemProperties.Data FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Data/Font.cs">
+    <Files>
+      <File FileName="Data/Color.cs" Line="3" Column="20" />
+      <File FileName="Data/Font.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Data" expanded="True">
+            <Node name="Data" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="SdkDependencies" expanded="True" />
+              </Node>
+              <Node name="Font.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

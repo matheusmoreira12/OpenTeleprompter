@@ -1,0 +1,26 @@
+﻿<Properties>
+  <MonoDevelop.Ide.ItemProperties.Rendering FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Rendering/Renderer.cs">
+    <Files>
+      <File FileName="Rendering/Renderer.cs" Line="6" Column="24" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Rendering" expanded="True">
+            <Node name="Rendering" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Renderer.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

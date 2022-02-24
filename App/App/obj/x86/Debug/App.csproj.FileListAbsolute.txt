@@ -1,0 +1,6 @@
+/home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/App.exe
+/home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/App.pdb
+/home/fortes/Projects/OpenTeleprompter/App/App/obj/x86/Debug/App.csprojAssemblyReference.cache
+/home/fortes/Projects/OpenTeleprompter/App/App/obj/x86/Debug/App.csproj.CoreCompileInputs.cache
+/home/fortes/Projects/OpenTeleprompter/App/App/obj/x86/Debug/App.exe
+/home/fortes/Projects/OpenTeleprompter/App/App/obj/x86/Debug/App.pdb
