@@ -7,7 +7,7 @@ namespace OpenTeleprompter.Data
         public TextStyleOptions(
             bool isBold, 
             bool isItalic, 
-            bool isUnderline, 
+            bool isUnderlined, 
             bool isHighlighed, 
             bool isBlinking, 
             Color textColor, 
@@ -19,7 +19,7 @@ namespace OpenTeleprompter.Data
         {
             IsBold = isBold;
             IsItalic = isItalic;
-            IsUnderline = isUnderline;
+            IsUnderlined = isUnderlined;
             IsHighlighed = isHighlighed;
             IsBlinking = isBlinking;
             TextColor = textColor;
@@ -31,7 +31,7 @@ namespace OpenTeleprompter.Data
 
         public readonly bool IsBold;
         public readonly bool IsItalic;
-        public readonly bool IsUnderline;
+        public readonly bool IsUnderlined;
         public readonly bool IsHighlighed;
         public readonly bool IsBlinking;
         public readonly Color TextColor;

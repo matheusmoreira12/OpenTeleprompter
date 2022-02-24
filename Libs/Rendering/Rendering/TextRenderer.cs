@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Gdk;
 using OpenTeleprompter.Data;
 
@@ -15,28 +16,36 @@ namespace OpenTeleprompter.Rendering
             float x = 0;
             float y = 0;
             float lineHeight = 0;
-            var format = Text.Style.Intervals[0].Options;
+            var characterStyles = Text.GetCharacterStyles();
+            var characterAndStyles = Text.Characters.Zip(characterStyles, Tuple.Create);
 
-            for (int i = 0; i < Text.Characters.Length; i++)
+            foreach ((byte character, TextStyleOptions style) in characterAndStyles)
             {
-                var character = Text.Characters[i];
-
                 if (character == (byte)'\n')
                 {
-                    x = 0;
-                    y += lineHeight;
-                    lineHeight = 0;
+                    advancePaperAndReturnCarriage();
                     continue;
                 }
 
-                var glyph = format.Font.Glyphs.First(g=> g.Character == character);
+                // TODO: Render each character
 
+                advanceCarriage(0);
+                updateLineHeight(0);
+            }
 
+            void advancePaperAndReturnCarriage()
+            {
+                x = 0;
+                y += lineHeight;
+                lineHeight = 0;
+            }
 
-                x += glyph.Size.Width;
+            void advanceCarriage(float charWidth) => x += charWidth;
 
-                if (lineHeight < format.FontHeight)
-                    lineHeight = format.FontHeight;
+            void updateLineHeight(float charHeight)
+            {
+                if (charHeight > lineHeight)
+                    lineHeight = charHeight;
             }
         }
 
