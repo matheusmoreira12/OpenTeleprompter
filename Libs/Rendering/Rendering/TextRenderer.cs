@@ -89,15 +89,9 @@ namespace OpenTeleprompter.Rendering
                     => fontHeight + lineSpacing / 2;
             }
 
-            void breakLine()
-            {
-                y += lineHeight;
-            }
+            void breakLine() => y += lineHeight;
 
-            void returnCarriage()
-            {
-                x = 0;
-            }
+            void returnCarriage() => x = 0;
 
             void renderHighlight(TextStyleOptions style, float characterWidth)
             {
