@@ -12,7 +12,9 @@
     <property name="WindowPosition">CenterOnParent</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
-      <placeholder />
+      <widget class="Gtk.DrawingArea" id="drawingarea1">
+        <property name="MemberName" />
+      </widget>
     </child>
   </widget>
 </stetic-interface>

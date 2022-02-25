@@ -1,9 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workbench ActiveDocument="Rendering/TextRenderer.cs">
     <Files>
-      <File FileName="Rendering/Renderer.cs" Line="13" Column="1" />
-      <File FileName="Rendering/PageRenderer.cs" Line="14" Column="53" />
-      <File FileName="Rendering/TextRenderer.cs" Line="19" Column="13" />
+      <File FileName="Rendering/Renderer.cs" Line="2" Column="1" />
+      <File FileName="Rendering/PageRenderer.cs" Line="2" Column="1" />
+      <File FileName="Rendering/TextRenderer.cs" Line="40" Column="48" />
+      <File FileName="Rendering/GlyphRenderer.cs" Line="6" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,7 +13,6 @@
             <Node name="Rendering" expanded="True">
               <Node name="Dependencies" expanded="True">
                 <Node name="AssemblyDependencies" expanded="True" />
-                <Node name="PackageDependencies" expanded="True" />
                 <Node name="SdkDependencies" expanded="True" />
               </Node>
               <Node name="TextRenderer.cs" selected="True" />

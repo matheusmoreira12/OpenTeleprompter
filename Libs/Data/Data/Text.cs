@@ -4,38 +4,43 @@ using System.Linq;
 
 namespace OpenTeleprompter.Data
 {
-    public class Text
+    public sealed class Text
     {
-        public readonly byte[] Characters;
+        public readonly string Content;
         public readonly TextStyle Style;
 
-        public Text(byte[] characters, TextStyle style)
+        public Text(string content, TextStyle style)
         {
-            Characters = characters;
+            Validation.TextStyleValidator.Validate(nameof(style), style, content);
+
+            Content = content;
             Style = style;
         }
 
-        public IEnumerable<TextStyleOptions> GetCharacterStyles()
+        public TextStyleOptions[] GetIndividualCharacterStyles()
         {
             IEnumerable<TextStyleOptions> reverseGetCharacterStyles() {
-                var intervalsReverseEnumerator = Style.Intervals.Reverse().GetEnumerator();
-                var interval = intervalsReverseEnumerator.Current;
-                for (int i = Characters.Length - 1; i >= 0; i++)
-                {
-                    if (interval.Start >= i)
-                        interval = getNextInterval();
+                var reversedIntervals = Style.Intervals.Reverse();
+                var reversedIntervalsEnumerator = reversedIntervals.GetEnumerator();
+                reversedIntervalsEnumerator.MoveNext();
+                var interval = reversedIntervalsEnumerator.Current;
+                int length = Content.Length;
+                return Content.Reverse().Select((character, i) =>
+                    {
+                        int position = length - 1 - i;
+                        if (position < interval.Start)
+                            goToPreviousInterval();
 
-                    yield return interval.Options;
-                }
+                        return interval.Options;
+                    });
 
-                TextStyleInterval getNextInterval()
-                {
-                    intervalsReverseEnumerator.MoveNext();
-                    return intervalsReverseEnumerator.Current;
+                void goToPreviousInterval() {
+                    if (reversedIntervalsEnumerator.MoveNext())
+                        interval = reversedIntervalsEnumerator.Current;
                 }
             }
 
-            return reverseGetCharacterStyles().Reverse().ToArray();
+            return reverseGetCharacterStyles().ToArray();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Gdk;
+﻿using Cairo;
 
 namespace OpenTeleprompter.Rendering
 {
@@ -9,7 +9,7 @@ namespace OpenTeleprompter.Rendering
             Source = source;
         }
 
-        public abstract void Render(DrawingContext context);
+        public abstract void Render(Context context);
 
         protected readonly Tsource Source;
     }

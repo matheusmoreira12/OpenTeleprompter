@@ -2,7 +2,7 @@
 
 namespace OpenTeleprompter.Data
 {
-    public class TextStyleOptions
+    public sealed class TextStyleOptions
     {
         public TextStyleOptions(
             bool isBold, 
@@ -14,7 +14,8 @@ namespace OpenTeleprompter.Data
             Color highlightColor,
             Font font,
             float fontHeight,
-            float baselineShift
+            float baselineShift,
+            float lineSpacing
             )
         {
             IsBold = isBold;
@@ -27,6 +28,7 @@ namespace OpenTeleprompter.Data
             Font = font;
             FontHeight = fontHeight;
             BaselineShift = baselineShift;
+            LineSpacing = lineSpacing;
         }
 
         public readonly bool IsBold;
@@ -39,5 +41,6 @@ namespace OpenTeleprompter.Data
         public readonly Font Font;
         public readonly float FontHeight;
         public readonly float BaselineShift;
+        public readonly float LineSpacing;
     }
 }

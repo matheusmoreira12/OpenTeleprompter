@@ -1,14 +1,12 @@
 ﻿namespace OpenTeleprompter.Data
 {
-    public class FontGlyphArea
+    public sealed class FontGlyphArea
     {
-        public FontGlyphArea(Point[] contour, bool mode)
+        public FontGlyphArea(Point[] contour)
         {
             Contour = contour;
-            Mode = mode;
         }
 
         public readonly Point[] Contour;
-        public readonly bool Mode;
     }
 }

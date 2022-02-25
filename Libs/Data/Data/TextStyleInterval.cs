@@ -1,6 +1,6 @@
 ﻿namespace OpenTeleprompter.Data
 {
-    public class TextStyleInterval
+    public sealed class TextStyleInterval
     {
         public TextStyleInterval(int start, TextStyleOptions options)
         {

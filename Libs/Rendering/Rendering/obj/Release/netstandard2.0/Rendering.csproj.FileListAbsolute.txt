@@ -10,3 +10,4 @@
 /home/fortes/Projects/OpenTeleprompter/Libs/Rendering/Rendering/bin/Release/netstandard2.0/Data.pdb
 /home/fortes/Projects/OpenTeleprompter/Libs/Rendering/Rendering/obj/Release/netstandard2.0/Rendering.csprojAssemblyReference.cache
 /home/fortes/Projects/OpenTeleprompter/Libs/Rendering/Rendering/obj/Release/netstandard2.0/Rendering.csproj.CopyComplete
+/home/fortes/Projects/OpenTeleprompter/Libs/Rendering/Rendering/bin/Release/netstandard2.0/Mono.Cairo.dll

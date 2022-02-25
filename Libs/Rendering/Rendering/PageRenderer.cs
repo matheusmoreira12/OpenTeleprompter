@@ -1,15 +1,15 @@
-﻿using Gdk;
+﻿using Cairo;
 using OpenTeleprompter.Data;
 
 namespace OpenTeleprompter.Rendering
 {
-    public class PageRenderer: Renderer<Page>
+    public sealed class PageRenderer: Renderer<Page>
     {
         public PageRenderer(Page page) : base(page)
         {
         }
 
-        public override void Render(DrawingContext context)
+        public override void Render(Context context)
         {
             var textRenderer = new TextRenderer(Page.Text);
         }

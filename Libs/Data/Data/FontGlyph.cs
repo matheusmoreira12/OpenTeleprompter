@@ -1,6 +1,6 @@
 ﻿namespace OpenTeleprompter.Data
 {
-    public class FontGlyph
+    public sealed class FontGlyph
     {
         public FontGlyph(char character, FontGlyphArea[] areas, Size size)
         {

@@ -1,7 +1,7 @@
 ﻿using System;
 namespace OpenTeleprompter.Data
 {
-    public class Page
+    public sealed class Page
     {
         public Page(Text text)
         {

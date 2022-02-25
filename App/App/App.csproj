@@ -47,6 +47,15 @@
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="Mono.Posix" />
+    <Reference Include="Rendering">
+      <HintPath>..\..\Libs\Rendering\Rendering\bin\Release\netstandard2.0\Rendering.dll</HintPath>
+    </Reference>
+    <Reference Include="Data">
+      <HintPath>..\..\Libs\Data\Data\bin\Release\netstandard2.0\Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cairo">
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
