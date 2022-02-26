@@ -21,22 +21,29 @@ public partial class MainWindow : Gtk.Window
                         new[]
                         {
                             new Point(0, 0),
-                            new Point(15, 0),
-                            new Point(15, 20),
-                            new Point(0, 20),
+                            new Point(8, 20),
+                            new Point(16, 0)
                         }
                     ),
                     new FontGlyphArea(
                         new[]
                         {
-                            new Point(2, 2),
-                            new Point(13, 2),
-                            new Point(13, 18),
-                            new Point(2, 18),
+                            new Point(2.5f, 0),
+                            new Point(4, 4),
+                            new Point(12, 4),
+                            new Point(13.5f, 0)
+                        }
+                    ),
+                    new FontGlyphArea(
+                        new[]
+                        {
+                            new Point(5, 6),
+                            new Point(8, 14.5f),
+                            new Point(11, 6)
                         }
                     ),
                 },
-                15
+                16
             );
             var f = new Font(
                 new []
