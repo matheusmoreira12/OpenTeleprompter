@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Linq;
 using Gtk;
 using OpenTeleprompter.Data;
-using OpenTeleprompter.Rendering;
+using OpenTeleprompter.Rendering.Renderers;
 
 public partial class MainWindow : Gtk.Window
 {
@@ -21,8 +21,8 @@ public partial class MainWindow : Gtk.Window
                         new[]
                         {
                             new Point(0, 0),
-                            new Point(20, 0),
-                            new Point(20, 20),
+                            new Point(15, 0),
+                            new Point(15, 20),
                             new Point(0, 20),
                         }
                     ),
@@ -30,54 +30,39 @@ public partial class MainWindow : Gtk.Window
                         new[]
                         {
                             new Point(2, 2),
-                            new Point(18, 2),
-                            new Point(18, 18),
+                            new Point(13, 2),
+                            new Point(13, 18),
                             new Point(2, 18),
                         }
                     ),
                 },
-                new Size(20, 20)
+                15
             );
             var f = new Font(
                 new []
                 {
                     g
-                }
+                },
+                20
                 );
             var fo1 = new TextStyleOptions(
-                false,
-                false,
-                false,
-                true,
-                false,
-                new Color(0, 0, 0),
-                new Color(255, 0, 0),
                 f,
-                20,
-                0,
-                10
+                new Color(0, 0, 0)
                 );
             var fo2 = new TextStyleOptions(
-                false,
-                false,
-                false,
-                false,
-                false,
-                new Color(0, 0, 0),
-                new Color(0, 0, 0),
                 f,
-                20,
-                0,
-                10
+                new Color(255, 255, 255)
                 );
-            var t = new Text("aaaaaaaaaaaaaaaaaaaaaaaa\n\raaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n\raaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n\raaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n\raaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n\raaaaaaaaaaaaa", new TextStyle(
+            var t = new Text("aaaaaaaaaaaaaaaaaaaaaaaa\r\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\naaaaaaaaaaaaa", new TextStyle(
                 new[]
                 {
                     new TextStyleInterval(0, fo1),
-                    new TextStyleInterval(50, fo2),
+                    new TextStyleInterval(150, fo2),
                 }
                 ));
-            var r = new TextRenderer(t);
+            var p = new Page(t, new PageStyle(new Color(0, 0, 0)));
+            var r = new PageRenderer(p);
+            c.Translate(50, 50);
             r.Render(c);
         };
     }

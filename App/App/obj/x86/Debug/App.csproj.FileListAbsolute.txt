@@ -106,3 +106,17 @@
 /home/fortes/Projects/OpenTeleprompter/App/App/obj/x86/Debug/App.csproj.CopyComplete
 /home/fortes/Projects/OpenTeleprompter/App/App/obj/x86/Debug/App.exe
 /home/fortes/Projects/OpenTeleprompter/App/App/obj/x86/Debug/App.pdb
+/home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/atk-sharp.dll
+/home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/gdk-sharp.dll
+/home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/glade-sharp.dll
+/home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/glib-sharp.dll
+/home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/gtk-sharp.dll
+/home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/Mono.Posix.dll
+/home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/pango-sharp.dll
+/home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/System.dll
+/home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/gtk-sharp.dll.config
+/home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/gdk-sharp.dll.config
+/home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/glib-sharp.dll.config
+/home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/glade-sharp.dll.config
+/home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/pango-sharp.dll.config
+/home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/atk-sharp.dll.config

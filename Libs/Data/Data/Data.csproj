@@ -6,6 +6,9 @@
 
   <ItemGroup>
     <Compile Remove="Class1.cs" />
+    <Compile Remove="StyledCharacter.cs" />
+    <Compile Remove="StyledString.cs" />
+    <Compile Remove="TextDecoration.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Validation\" />

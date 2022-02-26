@@ -4,9 +4,10 @@ namespace OpenTeleprompter.Data
 {
     public sealed class Font
     {
-        public Font(FontGlyph[] glyphs)
+        public Font(FontGlyph[] glyphs, float height)
         {
             Glyphs = glyphs;
+            Height = height;
         }
 
         public FontGlyph GetCharacterGlyph(char character)
@@ -19,5 +20,7 @@ namespace OpenTeleprompter.Data
         }
 
         public readonly FontGlyph[] Glyphs;
+
+        public readonly float Height;
     }
 }

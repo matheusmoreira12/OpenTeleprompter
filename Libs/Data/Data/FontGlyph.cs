@@ -2,15 +2,15 @@
 {
     public sealed class FontGlyph
     {
-        public FontGlyph(char character, FontGlyphArea[] areas, Size size)
+        public FontGlyph(char character, FontGlyphArea[] areas, float width)
         {
             Character = character;
             Areas = areas;
-            Size = size;
+            Width = width;
         }
 
         public readonly char Character;
         public readonly FontGlyphArea[] Areas;
-        public readonly Size Size;
+        public readonly float Width;
     }
 }

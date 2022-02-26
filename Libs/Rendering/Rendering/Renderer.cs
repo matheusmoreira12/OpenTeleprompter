@@ -2,15 +2,18 @@
 
 namespace OpenTeleprompter.Rendering
 {
-    public abstract class Renderer<Tsource>
+    public abstract class Renderer
+    {
+        public abstract void Render(Context context);
+    }
+
+    public abstract class Renderer<Tsource> : Renderer
     {
         protected internal Renderer(Tsource source)
         {
             Source = source;
         }
 
-        public abstract void Render(Context context);
-
-        protected readonly Tsource Source;
+        public readonly Tsource Source;
     }
 }

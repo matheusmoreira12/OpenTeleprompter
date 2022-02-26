@@ -15,4 +15,12 @@
       <HintPath>..\..\..\App\App\bin\Debug\Mono.Cairo.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Renderers\" />
+    <Folder Include="StyledText\" />
+    <Folder Include="ValueConverters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="mono_crash.2301b4f128.0.json" />
+  </ItemGroup>
 </Project>
