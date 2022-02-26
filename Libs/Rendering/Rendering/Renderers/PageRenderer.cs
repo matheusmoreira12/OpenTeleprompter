@@ -8,6 +8,7 @@ namespace OpenTeleprompter.Rendering.Renderers
     {
         public PageRenderer(Page page) : base(page)
         {
+            Initialize();
         }
 
         protected override IEnumerable<Renderer> CreateSubRenderers()

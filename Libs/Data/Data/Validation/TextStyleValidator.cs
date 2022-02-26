@@ -11,7 +11,7 @@ namespace OpenTeleprompter.Data.Validation
                 throw new ArgumentException("At least one text style interval was expected.",
                     paramName);
 
-            if (!doesTheFirstIntervalStartAtZero())
+            if (intervals[0].Start == 0)
                 throw new ArgumentException("First text style interval does not start at 0.",
                     paramName);
 
@@ -22,12 +22,6 @@ namespace OpenTeleprompter.Data.Validation
             if (!allIntervalsWithinBounds())
                 throw new ArgumentException("Some text style intervals are out of the text bounds.",
                     paramName);
-
-            bool doesTheFirstIntervalStartAtZero()
-            {
-                var first = intervals[0];
-                return first.Start == 0;
-            }
 
             bool areIntervalsInAscendingStartOrder()
             {

@@ -9,22 +9,14 @@ namespace OpenTeleprompter.Rendering.ValueConverters
     {
         public override StyledString[] Convert(Text value)
         {
-            return generateStyledStrings().ToArray();
-
-            IEnumerable<StyledString> generateStyledStrings()
-            {
-                var textAsString = value.String;
-                var styleIntervals = value.Style.Intervals;
-                for (int i = 0; i < styleIntervals.Length; i++)
+            var textAsString = value.String;
+            var styleIntervals = value.Style.Intervals;
+            return styleIntervals.Select((interval) =>
                 {
-                    var interval = styleIntervals[i];
-                    int start = interval.Start;
-                    var nextInterval = i < styleIntervals.Length - 1 ? styleIntervals[i + 1] : null;
-                    int end = nextInterval?.Start ?? textAsString.Length - 1;
-                    string substring = textAsString.Substring(start, end - start);
-                    yield return StyledString.FromString(substring, interval.Options);
-                }
-            }
+                    string str = textAsString.Substring(interval.Start,
+                        interval.End - interval.Start + 1);
+                    return StyledString.FromString(str, interval.Options);
+                }).ToArray();
         }
 
         public override StyledString[] ConvertBack(Text value)

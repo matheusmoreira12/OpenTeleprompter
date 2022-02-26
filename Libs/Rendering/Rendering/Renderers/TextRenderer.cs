@@ -11,6 +11,7 @@ namespace OpenTeleprompter.Rendering.Renderers
     {
         public TextRenderer(Text text): base(text)
         {
+            Initialize();
         }
 
         protected override IEnumerable<Renderer> CreateSubRenderers()

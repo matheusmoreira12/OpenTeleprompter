@@ -9,6 +9,10 @@ namespace OpenTeleprompter.Rendering
     {
         protected internal DerivedRenderer(Tsource source) : base(source)
         {
+        }
+
+        protected virtual void Initialize()
+        {
             SubRenderers = CreateSubRenderers().ToArray();
         }
 
@@ -20,6 +24,6 @@ namespace OpenTeleprompter.Rendering
                 subRenderer.Render(context);
         }
 
-        public readonly Renderer[] SubRenderers;
+        public Renderer[] SubRenderers { get; private set; }
     }
 }

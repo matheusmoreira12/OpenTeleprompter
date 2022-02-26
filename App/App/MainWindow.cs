@@ -53,11 +53,11 @@ public partial class MainWindow : Gtk.Window
                 f,
                 new Color(255, 255, 255)
                 );
-            var t = new Text("aaaaaaaaaaaaaaaaaaaaaaaa\r\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\naaaaaaaaaaaaa", new TextStyle(
+            var t = new Text("a\r\naa\r\naaa\r\naaaa\r\naaaaa\r\n", new TextStyle(
                 new[]
                 {
-                    new TextStyleInterval(0, fo1),
-                    new TextStyleInterval(150, fo2),
+                    new TextStyleInterval(0, 1, fo1),
+                    new TextStyleInterval(2, 24, fo2),
                 }
                 ));
             var p = new Page(t, new PageStyle(new Color(0, 0, 0)));

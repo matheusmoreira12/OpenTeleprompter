@@ -16,6 +16,8 @@ namespace OpenTeleprompter.Rendering.Renderers
         {
             RenderStartX = renderStartX;
             RenderStartY = renderStartY;
+
+            Initialize();
         }
 
         public override void Render(Context context) {

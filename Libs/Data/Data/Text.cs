@@ -11,8 +11,6 @@ namespace OpenTeleprompter.Data
 
         public Text(string content, TextStyle style)
         {
-            Validation.TextStyleValidator.Validate(nameof(style), style, content);
-
             String = content;
             Style = style;
         }

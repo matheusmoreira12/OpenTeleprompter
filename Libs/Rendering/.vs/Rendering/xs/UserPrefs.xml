@@ -1,14 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Rendering/Renderers/StyledStringRenderer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Rendering/ValueConverters/TextToStyledStringsConverter.cs">
     <Files>
-      <File FileName="Rendering/Renderers/TextRenderer.cs" Line="16" Column="1" />
-      <File FileName="Rendering/Renderers/StyledStringRenderer.cs" Line="24" Column="22" />
-      <File FileName="Rendering/Renderers/GlyphRenderer.cs" Line="47" Column="28" />
+      <File FileName="Rendering/Renderers/TextRenderer.cs" Line="26" Column="51" />
+      <File FileName="Rendering/Renderers/StyledStringRenderer.cs" Line="65" Column="13" />
+      <File FileName="Rendering/Renderers/GlyphRenderer.cs" Line="34" Column="18" />
       <File FileName="Rendering/Renderers/PageRenderer.cs" Line="13" Column="48" />
       <File FileName="Rendering/TextRenderExtents.cs" Line="16" Column="55" />
       <File FileName="Rendering/Renderer.cs" Line="3" Column="37" />
-      <File FileName="Rendering/DerivedRenderer.cs" Line="19" Column="38" />
+      <File FileName="Rendering/DerivedRenderer.cs" Line="20" Column="35" />
       <File FileName="Rendering/StyledText/StyledString.cs" Line="19" Column="33" />
+      <File FileName="Rendering/ValueConverters/TextToStyledStringsConverter.cs" Line="25" Column="77" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,11 +20,11 @@
                 <Node name="AssemblyDependencies" expanded="True" />
                 <Node name="SdkDependencies" expanded="True" />
               </Node>
-              <Node name="Renderers" expanded="True">
-                <Node name="StyledStringRenderer.cs" selected="True" />
-              </Node>
+              <Node name="Renderers" expanded="True" />
               <Node name="StyledText" expanded="True" />
-              <Node name="ValueConverters" expanded="True" />
+              <Node name="ValueConverters" expanded="True">
+                <Node name="TextToStyledStringsConverter.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

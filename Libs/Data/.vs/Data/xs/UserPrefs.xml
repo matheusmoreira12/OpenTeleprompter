@@ -1,13 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Data/PageStyle.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Data/Text.cs">
     <Files>
-      <File FileName="Data/TextStyle.cs" Line="9" Column="1" />
-      <File FileName="Data/TextStyleInterval.cs" Line="14" Column="2" />
+      <File FileName="Data/TextStyle.cs" Line="8" Column="10" />
+      <File FileName="Data/TextStyleInterval.cs" Line="7" Column="27" />
       <File FileName="Data/TextStyleOptions.cs" Line="13" Column="26" />
-      <File FileName="Data/Font.cs" Line="7" Column="26" />
+      <File FileName="Data/Font.cs" Line="18" Column="13" />
       <File FileName="Data/FontGlyph.cs" Line="12" Column="27" />
-      <File FileName="Data/TextDecoration.cs" Line="8" Column="21" />
       <File FileName="Data/PageStyle.cs" Line="7" Column="46" />
+      <File FileName="Data/Validation/TextStyleValidator.cs" Line="40" Column="14" />
+      <File FileName="Data/Text.cs" Line="14" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,7 +19,7 @@
                 <Node name="SdkDependencies" expanded="True" />
               </Node>
               <Node name="Validation" expanded="True" />
-              <Node name="PageStyle.cs" selected="True" />
+              <Node name="Text.cs" selected="True" />
             </Node>
           </Node>
         </State>
