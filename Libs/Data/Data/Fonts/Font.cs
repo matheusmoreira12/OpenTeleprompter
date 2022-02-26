@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OpenTeleprompter.Data
+namespace OpenTeleprompter.Data.Fonts
 {
     public sealed class Font
     {

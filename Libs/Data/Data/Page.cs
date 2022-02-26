@@ -1,15 +1,24 @@
 ﻿using System;
+using OpenTeleprompter.Data.Hierarchy;
+
 namespace OpenTeleprompter.Data
 {
     public sealed class Page
     {
-        public Page(Text text, PageStyle style)
+        public Page(Text text)
         {
             Text = text;
-            Style = style;
+
+            HierarchyManager.SetParent(Text, this);
+        }
+
+        ~Page()
+        {
+            HierarchyManager.UnsetParent(Text);
         }
 
         public readonly Text Text;
-        public readonly PageStyle Style;
+
+        public Document ParentDocument => (Document)HierarchyManager.GetParent(this);
     }
 }

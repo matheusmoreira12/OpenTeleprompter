@@ -1,4 +1,4 @@
-﻿namespace OpenTeleprompter.Data
+﻿namespace OpenTeleprompter.Data.Fonts
 {
     public sealed class FontGlyph
     {

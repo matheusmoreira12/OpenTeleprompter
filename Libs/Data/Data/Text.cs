@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using OpenTeleprompter.Data.Hierarchy;
 
 namespace OpenTeleprompter.Data
 {
@@ -14,5 +15,7 @@ namespace OpenTeleprompter.Data
             String = content;
             Style = style;
         }
+
+        public Page ParentPage => (Page)HierarchyManager.GetParent(this);
     }
 }

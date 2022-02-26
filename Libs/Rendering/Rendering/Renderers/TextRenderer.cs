@@ -16,11 +16,11 @@ namespace OpenTeleprompter.Rendering.Renderers
 
         protected override IEnumerable<Renderer> CreateSubRenderers()
         {
-            float x = 0;
-            float y = 0;
-
             var converter = new TextToStyledStringsConverter();
             var sstrs = converter.Convert(Text);
+
+            float x = 0;
+            float y = 0;
 
             foreach (var sstr in sstrs)
             {

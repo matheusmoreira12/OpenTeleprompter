@@ -1,14 +1,15 @@
 ﻿using Cairo;
 using OpenTeleprompter.Data;
+using OpenTeleprompter.Data.Fonts;
 
 namespace OpenTeleprompter.Rendering.Renderers
 {
     public sealed class GlyphRenderer : Renderer<FontGlyph>
     {
-        public GlyphRenderer(FontGlyph source, float x, float y) : base(source)
+        public GlyphRenderer(FontGlyph source, float renderX, float renderY) : base(source)
         {
-            X = x;
-            Y = y;
+            RenderX = renderX;
+            RenderY = renderY;
         }
 
         public override void Render(Context context)
@@ -17,7 +18,7 @@ namespace OpenTeleprompter.Rendering.Renderers
 
             context.FillRule = FillRule.EvenOdd;
 
-            context.Translate(X, Y);
+            context.Translate(RenderX, RenderY);
 
             context.NewPath();
 
@@ -49,7 +50,7 @@ namespace OpenTeleprompter.Rendering.Renderers
             context.Restore();
         }
 
-        public readonly float X;
-        public readonly float Y;
+        public readonly float RenderX;
+        public readonly float RenderY;
     }
 }

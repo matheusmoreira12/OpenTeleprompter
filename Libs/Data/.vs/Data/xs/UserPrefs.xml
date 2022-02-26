@@ -1,14 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Data/Text.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Data/DocumentReader.cs">
     <Files>
-      <File FileName="Data/TextStyle.cs" Line="8" Column="10" />
-      <File FileName="Data/TextStyleInterval.cs" Line="7" Column="27" />
-      <File FileName="Data/TextStyleOptions.cs" Line="13" Column="26" />
-      <File FileName="Data/Font.cs" Line="18" Column="13" />
-      <File FileName="Data/FontGlyph.cs" Line="12" Column="27" />
-      <File FileName="Data/PageStyle.cs" Line="7" Column="46" />
-      <File FileName="Data/Validation/TextStyleValidator.cs" Line="40" Column="14" />
-      <File FileName="Data/Text.cs" Line="14" Column="1" />
+      <File FileName="Data/Animations/AnimatedValue.cs" Line="12" Column="10" />
+      <File FileName="Data/Animations/AnimatedFloat.cs" Line="16" Column="101" />
+      <File FileName="Data/DocumentReader.cs" Line="8" Column="33" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,8 +13,11 @@
               <Node name="Dependencies" expanded="True">
                 <Node name="SdkDependencies" expanded="True" />
               </Node>
+              <Node name="Animations" expanded="True" />
+              <Node name="Fonts" expanded="True" />
+              <Node name="Hierarchy" expanded="True" />
               <Node name="Validation" expanded="True" />
-              <Node name="Text.cs" selected="True" />
+              <Node name="DocumentReader.cs" selected="True" />
             </Node>
           </Node>
         </State>
