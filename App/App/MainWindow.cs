@@ -94,7 +94,7 @@ public partial class MainWindow : Gtk.Window
         };
 
         var ti = new Timer(1000 / 30);
-        ti.Elapsed += (_o, _args) =>
+        ti.Elapsed += (_, __) =>
         {
             drawingarea1.QueueDraw();
             Console.Write("tick");
@@ -102,7 +102,7 @@ public partial class MainWindow : Gtk.Window
         ti.Enabled = true;
 
         float sy = 0;
-        KeyPressEvent += (o, args) =>
+        KeyPressEvent += (_, args) =>
         {
             switch (args.Event.Key)
             {

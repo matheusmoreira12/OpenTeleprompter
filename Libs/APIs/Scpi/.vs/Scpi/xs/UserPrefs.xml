@@ -1,14 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Scpi/Class1.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Scpi/ScpiController.cs">
     <Files>
-      <File FileName="Scpi/Class1.cs" Line="3" Column="28" />
+      <File FileName="Scpi/ScpiController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Scpi" expanded="True">
             <Node name="Scpi" expanded="True">
-              <Node name="Class1.cs" selected="True" />
+              <Node name="ScpiController.cs" selected="True" />
             </Node>
           </Node>
         </State>
