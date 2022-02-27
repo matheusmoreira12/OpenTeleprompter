@@ -1,14 +1,17 @@
 ﻿using System;
-namespace Data.Animations
+namespace OpenTeleprompter.Data.Animations
 {
     public abstract class AnimatedValue<Tvalue>
     {
-        protected internal AnimatedValue(Tvalue start, Tvalue end, TimeSpan transitionDuration)
+        protected internal AnimatedValue(Tvalue start, Tvalue end, TimeSpan duration,
+            AnimationEasingFunction easingFunction)
         {
             Start = start;
             End = end;
             StartTime = DateTime.Now;
-            TransitionDuration = transitionDuration;
+            EasingFunction = easingFunction ??
+                throw new ArgumentNullException(nameof(easingFunction));
+            Duration = duration;
         }
 
         public Tvalue Current
@@ -16,20 +19,26 @@ namespace Data.Animations
             get
             {
                 var now = DateTime.Now;
-                var endTime = StartTime + TransitionDuration;
-                if (now < StartTime)
+                if (now <= StartTime)
                     return Start;
-                if (now > endTime)
+
+                var endTime = StartTime + Duration;
+                if (now >= endTime)
                     return End;
-                return CalculateCurrent();
+
+                var elapsedTime = DateTime.Now - StartTime;
+                double progress = elapsedTime.Ticks / (double)Duration.Ticks;
+                double easedProgress = EasingFunction(progress);
+                return CalculateCurrent(easedProgress);
             }
         }
 
-        public abstract Tvalue CalculateCurrent();
+        public abstract Tvalue CalculateCurrent(double progress);
 
+        protected readonly AnimationEasingFunction EasingFunction;
         protected readonly Tvalue Start;
         protected readonly Tvalue End;
         protected readonly DateTime StartTime;
-        protected readonly TimeSpan TransitionDuration;
+        protected readonly TimeSpan Duration;
     }
 }

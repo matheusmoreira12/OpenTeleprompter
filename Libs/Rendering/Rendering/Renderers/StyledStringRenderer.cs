@@ -23,8 +23,7 @@ namespace OpenTeleprompter.Rendering.Renderers
         public override void Render(Context context) {
             context.Save();
 
-            var textColor = Source.Style.TextColor;
-            context.SetSourceRGB(textColor.R, textColor.G, textColor.B);
+            context.SetSource(Source.Style.TextColor);
 
             base.Render(context);
 

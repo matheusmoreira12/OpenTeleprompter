@@ -1,15 +1,7 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workbench ActiveDocument="Rendering/Renderers/DocumentRenderer.cs">
     <Files>
-      <File FileName="Rendering/Renderers/TextRenderer.cs" Line="26" Column="14" />
-      <File FileName="Rendering/Renderers/StyledStringRenderer.cs" Line="63" Column="39" />
-      <File FileName="Rendering/Renderers/GlyphRenderer.cs" Line="11" Column="19" />
-      <File FileName="Rendering/Renderers/PageRenderer.cs" Line="13" Column="1" />
-      <File FileName="Rendering/TextRenderExtents.cs" Line="16" Column="55" />
-      <File FileName="Rendering/Renderer.cs" Line="3" Column="37" />
-      <File FileName="Rendering/DerivedRenderer.cs" Line="20" Column="1" />
-      <File FileName="Rendering/StyledText/StyledString.cs" Line="19" Column="33" />
-      <File FileName="Rendering/ValueConverters/TextToStyledStringsConverter.cs" Line="19" Column="30" />
+      <File FileName="Rendering/Renderers/DocumentReaderRenderer.cs" Line="37" Column="36" />
       <File FileName="Rendering/Renderers/DocumentRenderer.cs" Line="2" Column="11" />
     </Files>
     <Pads>
@@ -22,7 +14,7 @@
                 <Node name="SdkDependencies" expanded="True" />
               </Node>
               <Node name="Renderers" expanded="True">
-                <Node name="DocumentRenderer.cs" selected="True" />
+                <Node name="DocumentReaderRenderer.cs" selected="True" />
               </Node>
               <Node name="StyledText" expanded="True" />
               <Node name="ValueConverters" expanded="True" />

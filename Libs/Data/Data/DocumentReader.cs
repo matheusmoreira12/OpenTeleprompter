@@ -1,17 +1,12 @@
-﻿using System;
-using Data.Animations;
-
-namespace Data
+﻿namespace OpenTeleprompter.Data
 {
     public sealed class DocumentReader
     {
-        public DocumentReader(DocumentReaderState state, float scrollY)
+        public DocumentReader()
         {
-            State = state;
-            ScrollY = new AnimatedFloat(scrollY);
+            State = new DocumentReaderState();
         }
 
         public readonly DocumentReaderState State;
-        public readonly AnimatedFloat ScrollY;
     }
 }

@@ -9,9 +9,16 @@ public partial class MainWindow
 	{
 		global::Stetic.Gui.Initialize(this);
 		// Widget MainWindow
+		this.WidthRequest = 500;
+		this.HeightRequest = 500;
+		this.ExtensionEvents = ((global::Gdk.ExtensionMode)(1));
 		this.Name = "MainWindow";
 		this.Title = global::Mono.Unix.Catalog.GetString("MainWindow");
+		this.TypeHint = ((global::Gdk.WindowTypeHint)(7));
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
+		this.Resizable = false;
+		this.AllowGrow = false;
+		this.Decorated = false;
 		// Container child MainWindow.Gtk.Container+ContainerChild
 		this.drawingarea1 = new global::Gtk.DrawingArea();
 		this.drawingarea1.Name = "drawingarea1";
@@ -20,8 +27,8 @@ public partial class MainWindow
 		{
 			this.Child.ShowAll();
 		}
-		this.DefaultWidth = 400;
-		this.DefaultHeight = 300;
+		this.DefaultWidth = 500;
+		this.DefaultHeight = 500;
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
 	}

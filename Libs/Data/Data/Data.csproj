@@ -9,6 +9,7 @@
     <Compile Remove="StyledCharacter.cs" />
     <Compile Remove="StyledString.cs" />
     <Compile Remove="TextDecoration.cs" />
+    <Compile Remove="Animations\AnimationEasingFunction.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Validation\" />

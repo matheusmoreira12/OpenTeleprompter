@@ -6,10 +6,17 @@
   <import>
     <widget-library name="../bin/Debug/App.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="400 300">
+  <widget class="Gtk.Window" id="MainWindow" design-size="500 500">
     <property name="MemberName" />
+    <property name="WidthRequest">500</property>
+    <property name="HeightRequest">500</property>
+    <property name="ExtensionEvents">All</property>
     <property name="Title" translatable="yes">MainWindow</property>
+    <property name="TypeHint">Desktop</property>
     <property name="WindowPosition">CenterOnParent</property>
+    <property name="Resizable">False</property>
+    <property name="AllowGrow">False</property>
+    <property name="Decorated">False</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
       <widget class="Gtk.DrawingArea" id="drawingarea1">

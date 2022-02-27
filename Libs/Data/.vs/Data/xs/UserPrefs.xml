@@ -1,9 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Data/DocumentReader.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Data/Animations/AnimatedValue.cs">
     <Files>
-      <File FileName="Data/Animations/AnimatedValue.cs" Line="12" Column="10" />
-      <File FileName="Data/Animations/AnimatedFloat.cs" Line="16" Column="101" />
-      <File FileName="Data/DocumentReader.cs" Line="8" Column="33" />
+      <File FileName="Data/Animations/AnimatedValue.cs" Line="12" Column="77" />
+      <File FileName="Data/Animations/AnimatedFloat.cs" Line="2" Column="27" />
+      <File FileName="Data/DocumentReaderState.cs" Line="9" Column="82" />
+      <File FileName="Data/Document.cs" Line="1" Column="1" />
+      <File FileName="Data/Text.cs" Line="12" Column="30" />
+      <File FileName="Data/Size.cs" Line="1" Column="1" />
+      <File FileName="Data/DocumentReader.cs" Line="10" Column="1" />
+      <File FileName="Data/Fonts/FontGlyphArea.cs" Line="1" Column="1" />
+      <File FileName="Data/Fonts/FontGlyph.cs" Line="1" Column="1" />
+      <File FileName="Data/Animations/AnimationEasingFunctions.cs" Line="2" Column="27" />
+      <File FileName="Data/Animations/EmptyCSharpFile.cs" Line="3" Column="62" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,11 +21,12 @@
               <Node name="Dependencies" expanded="True">
                 <Node name="SdkDependencies" expanded="True" />
               </Node>
-              <Node name="Animations" expanded="True" />
+              <Node name="Animations" expanded="True">
+                <Node name="AnimatedValue.cs" selected="True" />
+              </Node>
               <Node name="Fonts" expanded="True" />
               <Node name="Hierarchy" expanded="True" />
               <Node name="Validation" expanded="True" />
-              <Node name="DocumentReader.cs" selected="True" />
             </Node>
           </Node>
         </State>

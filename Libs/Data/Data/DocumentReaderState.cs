@@ -1,25 +1,39 @@
 ﻿using System;
+using OpenTeleprompter.Data.Animations;
 
-namespace Data
+namespace OpenTeleprompter.Data
 {
     public sealed class DocumentReaderState
     {
-        public int ScrollPage { get; private set; }
+        private static readonly TimeSpan TRANSITION_TIME = TimeSpan.FromSeconds(1);
+        private static readonly AnimationEasingFunction EASING_FUNCTION = AnimationEasingFunctions.Ease;
 
-        public int ScrollLine { get; private set; }
+        public float ScrollY {
+            get => AnimatedScrollY.Current;
+            set => AnimatedScrollY = AnimatedScrollY.Update(value);
+        }
+        private AnimatedFloat AnimatedScrollY = new AnimatedFloat(0, TRANSITION_TIME, EASING_FUNCTION);
 
-        public event EventHandler ChangeEvent;
-
-        public void SetScrollPage(int scrollPage)
+        public Document OpenDocument
         {
-            ScrollPage = scrollPage;
-            ChangeEvent.Invoke(this, new EventArgs());
+            get => _OpenDocument;
+            set
+            {
+                _OpenDocument = value;
+                Invoke_OnOpenDocumentChange();
+            }
+        }
+        private Document _OpenDocument;
+
+        private void Invoke_OnOpenDocumentChange()
+        {
+            OpenDocumentChangeEvent.Invoke(this, new EventArgs());
         }
 
-        public void SetScrollLine(int scrollLine)
+        public event EventHandler OpenDocumentChangeEvent = new EventHandler(OnOpenDocumentChange);
+
+        private static void OnOpenDocumentChange(object sender, EventArgs e)
         {
-            ScrollLine = scrollLine;
-            ChangeEvent.Invoke(this, new EventArgs());
         }
     }
 }

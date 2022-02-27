@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using OpenTeleprompter.Data.Hierarchy;
+﻿using OpenTeleprompter.Data.Hierarchy;
 
 namespace OpenTeleprompter.Data
 {
