@@ -7,6 +7,7 @@ using OpenTeleprompter.Data;
 using OpenTeleprompter.Data.Fonts;
 using OpenTeleprompter.Rendering.Renderers;
 
+
 public partial class MainWindow : Gtk.Window
 {
     public MainWindow() : base(Gtk.WindowType.Toplevel)
@@ -88,29 +89,35 @@ public partial class MainWindow : Gtk.Window
 
             var drr = new DocumentReaderRenderer(dr, new Size(w, h));
 
-            var c = Gdk.CairoHelper.Create(drawingarea1.GdkWindow);
-
-            drr.Render(c);
+            using (var c = Gdk.CairoHelper.Create(drawingarea1.GdkWindow))
+            {
+                drr.Render(c);
+            }
         };
 
         var ti = new Timer(1000 / 30);
         ti.Elapsed += (_, __) =>
         {
             drawingarea1.QueueDraw();
-            Console.Write("tick");
         };
         ti.Enabled = true;
 
         float sy = 0;
-        KeyPressEvent += (_, args) =>
+        KeyPressEvent += (_, e) =>
         {
-            switch (args.Event.Key)
+            switch (e.Event.Key)
             {
-                case Gdk.Key.w:
+                case Gdk.Key.s:
                     sy += 40;
                     break;
-                case Gdk.Key.s:
+                case Gdk.Key.w:
                     sy -= 40;
+                    break;
+                case Gdk.Key.d:
+                    sy = (float)Math.Round(sy / 720 + 1) * 720;
+                    break;
+                case Gdk.Key.a:
+                    sy = (float)Math.Round(sy / 720 - 1) * 720;
                     break;
             }
             dr.State.ScrollY = sy;

@@ -20,19 +20,19 @@ namespace OpenTeleprompter.Data
             set
             {
                 _OpenDocument = value;
-                Invoke_OnOpenDocumentChange();
+                Invoke_OnOpenDocumentChanged();
             }
         }
         private Document _OpenDocument;
 
-        private void Invoke_OnOpenDocumentChange()
+        private void Invoke_OnOpenDocumentChanged()
         {
-            OpenDocumentChangeEvent.Invoke(this, new EventArgs());
+            OpenDocumentChanged.Invoke(this, new EventArgs());
         }
 
-        public event EventHandler OpenDocumentChangeEvent = new EventHandler(OnOpenDocumentChange);
+        public event EventHandler OpenDocumentChanged = new EventHandler(OnOpenDocumentChanged);
 
-        private static void OnOpenDocumentChange(object sender, EventArgs e)
+        private static void OnOpenDocumentChanged(object sender, EventArgs e)
         {
         }
     }

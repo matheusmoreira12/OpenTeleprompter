@@ -1,7 +1,7 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Rendering/Renderers/DocumentRenderer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Rendering/Renderers/DocumentReaderRenderer.cs">
     <Files>
-      <File FileName="Rendering/Renderers/DocumentReaderRenderer.cs" Line="37" Column="36" />
+      <File FileName="Rendering/Renderers/DocumentReaderRenderer.cs" Line="36" Column="34" />
       <File FileName="Rendering/Renderers/DocumentRenderer.cs" Line="2" Column="11" />
     </Files>
     <Pads>
