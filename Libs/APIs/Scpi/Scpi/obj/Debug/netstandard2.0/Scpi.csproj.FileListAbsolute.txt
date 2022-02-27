@@ -1,9 +1,0 @@
-/home/fortes/Projects/OpenTeleprompter/Libs/APIs/Scpi/Scpi/bin/Debug/netstandard2.0/Scpi.deps.json
-/home/fortes/Projects/OpenTeleprompter/Libs/APIs/Scpi/Scpi/bin/Debug/netstandard2.0/Scpi.dll
-/home/fortes/Projects/OpenTeleprompter/Libs/APIs/Scpi/Scpi/bin/Debug/netstandard2.0/Scpi.pdb
-/home/fortes/Projects/OpenTeleprompter/Libs/APIs/Scpi/Scpi/obj/Debug/netstandard2.0/Scpi.csprojAssemblyReference.cache
-/home/fortes/Projects/OpenTeleprompter/Libs/APIs/Scpi/Scpi/obj/Debug/netstandard2.0/Scpi.AssemblyInfoInputs.cache
-/home/fortes/Projects/OpenTeleprompter/Libs/APIs/Scpi/Scpi/obj/Debug/netstandard2.0/Scpi.AssemblyInfo.cs
-/home/fortes/Projects/OpenTeleprompter/Libs/APIs/Scpi/Scpi/obj/Debug/netstandard2.0/Scpi.csproj.CoreCompileInputs.cache
-/home/fortes/Projects/OpenTeleprompter/Libs/APIs/Scpi/Scpi/obj/Debug/netstandard2.0/Scpi.dll
-/home/fortes/Projects/OpenTeleprompter/Libs/APIs/Scpi/Scpi/obj/Debug/netstandard2.0/Scpi.pdb
