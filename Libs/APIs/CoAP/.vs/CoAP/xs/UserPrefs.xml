@@ -1,8 +1,5 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="CoAP/CoAP.csproj">
-    <Files>
-      <File FileName="CoAP/CoAP.csproj" Line="11" Column="35" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">

@@ -8,14 +8,12 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Rendering" expanded="True">
-            <Node name="Rendering" expanded="True">
+            <Node name="Rendering" expanded="True" selected="True">
               <Node name="Dependencies" expanded="True">
                 <Node name="AssemblyDependencies" expanded="True" />
                 <Node name="SdkDependencies" expanded="True" />
               </Node>
-              <Node name="Renderers" expanded="True">
-                <Node name="DocumentReaderRenderer.cs" selected="True" />
-              </Node>
+              <Node name="Renderers" expanded="True" />
               <Node name="StyledText" expanded="True" />
               <Node name="ValueConverters" expanded="True" />
             </Node>

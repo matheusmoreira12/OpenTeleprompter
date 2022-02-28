@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Data/Animations/AnimatedValue.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Data/DocumentReaderState.cs">
     <Files>
       <File FileName="Data/Animations/AnimatedValue.cs" Line="12" Column="47" />
       <File FileName="Data/Animations/AnimatedFloat.cs" Line="2" Column="27" />
-      <File FileName="Data/DocumentReaderState.cs" Line="9" Column="82" />
+      <File FileName="Data/DocumentReaderState.cs" Line="5" Column="2" />
       <File FileName="Data/Document.cs" Line="1" Column="1" />
       <File FileName="Data/Text.cs" Line="12" Column="30" />
       <File FileName="Data/Size.cs" Line="1" Column="1" />
@@ -17,13 +17,11 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Data" expanded="True">
-            <Node name="Data" expanded="True">
+            <Node name="Data" expanded="True" selected="True">
               <Node name="Dependencies" expanded="True">
                 <Node name="SdkDependencies" expanded="True" />
               </Node>
-              <Node name="Animations" expanded="True">
-                <Node name="AnimatedValue.cs" selected="True" />
-              </Node>
+              <Node name="Animations" expanded="True" />
               <Node name="Fonts" expanded="True" />
               <Node name="Hierarchy" expanded="True" />
               <Node name="Validation" expanded="True" />
