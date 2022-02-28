@@ -76,6 +76,9 @@
     <Reference Include="System.Numerics" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="CoAP">
+      <HintPath>..\..\Libs\APIs\CoAP\CoAP\bin\Release\netstandard2.0\CoAP.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">

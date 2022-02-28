@@ -1,13 +1,27 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="CoAP/Annotation/CoAPResourceAttribute.cs">
+    <Files>
+      <File FileName="CoAP/Annotation/CoAPResourceAttribute.cs" Line="24" Column="10" />
+      <File FileName="CoAP/Annotation/CoAPDeleteMethodAttribute.cs" Line="5" Column="1" />
+      <File FileName="CoAP/Annotation/CoAPFetchMethodAttribute.cs" Line="5" Column="1" />
+      <File FileName="CoAP/Annotation/CoAPGetMethodAttribute.cs" Line="5" Column="1" />
+      <File FileName="CoAP/Annotation/CoAPMethodAttribute.cs" Line="6" Column="1" />
+      <File FileName="CoAP/Annotation/CoAPMethodType.cs" Line="1" Column="1" />
+      <File FileName="CoAP/Annotation/CoAPPatchMethodAttribute.cs" Line="5" Column="1" />
+      <File FileName="CoAP/Annotation/CoAPPostMethodAttribute.cs" Line="5" Column="1" />
+      <File FileName="CoAP/Annotation/CoAPPutMethodAttribute.cs" Line="5" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CoAP" expanded="True">
-            <Node name="CoAP" expanded="True" selected="True">
+            <Node name="CoAP" expanded="True">
               <Node name="Dependencies" expanded="True">
                 <Node name="PackageDependencies" expanded="True" />
                 <Node name="SdkDependencies" expanded="True" />
+              </Node>
+              <Node name="Annotation" expanded="True">
+                <Node name="CoAPResourceAttribute.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -16,7 +30,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
