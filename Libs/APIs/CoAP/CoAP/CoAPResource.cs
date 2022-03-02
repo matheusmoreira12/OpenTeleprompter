@@ -12,7 +12,6 @@ namespace OpenTeleprompter.APIs.CoAP
         public CoAPResource(Uri path)
         {
             Path = path;
-
             AssignMethods();
         }
 
@@ -68,12 +67,11 @@ namespace OpenTeleprompter.APIs.CoAP
         }
 
         public readonly Uri Path;
-
-        internal CoAPMethod GetMethod { get; private set; }
-        internal CoAPMethod PutMethod { get; private set; }
-        internal CoAPMethod PostMethod { get; private set; }
-        internal CoAPMethod FetchMethod { get; private set; }
-        internal CoAPMethod PatchMethod { get; private set; }
-        internal CoAPMethod DeleteMethod { get; private set; }
+        public CoAPMethod GetMethod { get; private set; }
+        public CoAPMethod PutMethod { get; private set; }
+        public CoAPMethod PostMethod { get; private set; }
+        public CoAPMethod FetchMethod { get; private set; }
+        public CoAPMethod PatchMethod { get; private set; }
+        public CoAPMethod DeleteMethod { get; private set; }
     }
 }

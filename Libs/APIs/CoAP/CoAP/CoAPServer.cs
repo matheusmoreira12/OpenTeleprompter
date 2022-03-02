@@ -10,15 +10,11 @@ namespace OpenTeleprompter.APIs.CoAP
         public CoAPServer(params int[] ports)
         {
             Ports = ports;
-
             AssignResources();
-            InitializeEndpoint();
+            AssignAndInitializeEndpoint();
         }
 
-        private void AssignResources()
-        {
-            Resources = GetResources().ToArray();
-        }
+        private void AssignResources() => Resources = GetResources().ToArray();
 
         private IEnumerable<CoAPResource> GetResources()
         {
@@ -45,7 +41,7 @@ namespace OpenTeleprompter.APIs.CoAP
             }
         }
 
-        private void InitializeEndpoint()
+        private void AssignAndInitializeEndpoint()
         {
             EndPoint = new Waher.Networking.CoAP.CoapEndpoint(Ports, null, null, null, false, false);
 
@@ -58,10 +54,8 @@ namespace OpenTeleprompter.APIs.CoAP
             }
         }
 
-        private readonly int[] Ports;
-
         protected Waher.Networking.CoAP.CoapEndpoint EndPoint { get; private set; }
-
+        public readonly int[] Ports;
         public CoAPResource[] Resources { get; private set; }
     }
 }
