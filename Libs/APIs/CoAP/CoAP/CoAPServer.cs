@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
@@ -8,18 +9,15 @@ namespace OpenTeleprompter.APIs.CoAP
     {
         public CoAPServer(params int[] ports)
         {
-            // TODO: Initialize server
+            Ports = ports;
 
-            Resources = GetResources().ToArray();
-            RegisterResources();
+            AssignResources();
+            InitializeEndpoint();
         }
 
-        private void RegisterResources()
+        private void AssignResources()
         {
-            foreach (var resource in Resources)
-            {
-                //TODO : Register each resource
-            }
+            Resources = GetResources().ToArray();
         }
 
         private IEnumerable<CoAPResource> GetResources()
@@ -29,23 +27,41 @@ namespace OpenTeleprompter.APIs.CoAP
                 BindingFlags.GetProperty | BindingFlags.GetField);
             foreach (var fieldOrProp in fieldsAndProps)
             {
-                fieldOrProp.GetCustomAttribute(typeof(Annotation.CoAPMethodAttribute));
-                if (fieldOrProp is FieldInfo)
+                var attr = (Annotation.CoAPResourceAttribute)fieldOrProp
+                    .GetCustomAttribute(typeof(Annotation.CoAPResourceAttribute));
+                if (attr != null)
                 {
-                    var field = (FieldInfo)fieldOrProp;
-                    if (field.FieldType == typeof(CoAPResource))
-                        yield return (CoAPResource)field.GetValue(this);
-                }
-                else if (fieldOrProp is PropertyInfo)
-                {
-                    var property = (PropertyInfo)fieldOrProp;
-                    if (property.PropertyType == typeof(CoAPResource))
-                        yield return (CoAPResource)property.GetValue(this);
+                    if (fieldOrProp is FieldInfo field)
+                    {
+                        if (field.FieldType == typeof(CoAPResource))
+                            yield return (CoAPResource)field.GetValue(this);
+                    }
+                    else if (fieldOrProp is PropertyInfo property)
+                    {
+                        if (property.PropertyType == typeof(CoAPResource))
+                            yield return (CoAPResource)property.GetValue(this);
+                    }
                 }
             }
         }
 
-        private readonly Waher.Networking.CoAP.CoapEndpoint EndPoint;
-        public readonly CoAPResource[] Resources;
+        private void InitializeEndpoint()
+        {
+            EndPoint = new Waher.Networking.CoAP.CoapEndpoint(Ports, null, null, null, false, false);
+
+            foreach (var resource in Resources)
+            {
+                var ilResource = new InterfaceLayer.CoAPResource(resource.Path.ToString(),
+                    resource.GetMethod, resource.PutMethod, resource.PostMethod,
+                    resource.FetchMethod, resource.PatchMethod, resource.DeleteMethod);
+                EndPoint.Register(ilResource);
+            }
+        }
+
+        private readonly int[] Ports;
+
+        protected Waher.Networking.CoAP.CoapEndpoint EndPoint { get; private set; }
+
+        public CoAPResource[] Resources { get; private set; }
     }
 }

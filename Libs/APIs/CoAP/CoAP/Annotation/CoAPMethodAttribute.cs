@@ -10,6 +10,6 @@ namespace OpenTeleprompter.APIs.CoAP.Annotation
             Type = type;
         }
 
-        private readonly CoAPMethodType Type;
+        internal readonly CoAPMethodType Type;
     }
 }
