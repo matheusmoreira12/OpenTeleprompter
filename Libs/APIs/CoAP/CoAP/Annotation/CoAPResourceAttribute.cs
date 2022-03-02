@@ -2,14 +2,8 @@
 
 namespace OpenTeleprompter.APIs.CoAP.Annotation
 {
-    [AttributeUsage(AttributeTargets.Field)]
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
     public sealed class CoAPResourceAttribute : Attribute
     {
-        public CoAPResourceAttribute(string path)
-        {
-            Path = new Uri(path);
-        }
-
-        public readonly Uri Path;
     }
 }

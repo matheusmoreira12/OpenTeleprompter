@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Annotation\" />
+    <Folder Include="InterfaceLayer\" />
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
