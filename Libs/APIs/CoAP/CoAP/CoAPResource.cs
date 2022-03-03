@@ -22,9 +22,9 @@ namespace OpenTeleprompter.APIs.CoAP
                 BindingFlags.GetProperty | BindingFlags.GetField);
             foreach (var fieldOrProp in fieldsAndProps)
             {
-                var methodAttr = (Annotation.CoAPMethodAttribute)fieldOrProp
-                    .GetCustomAttribute(typeof(Annotation.CoAPMethodAttribute));
-                if (methodAttr != null)
+                bool isMethodAttrDefined = Attribute.IsDefined(fieldOrProp,
+                    typeof(Annotation.CoAPMethodAttribute));
+                if (isMethodAttrDefined)
                 {
                     CoAPMethod method = null;
                     if (fieldOrProp is FieldInfo field)
@@ -40,6 +40,8 @@ namespace OpenTeleprompter.APIs.CoAP
 
                     if (method != null)
                     {
+                        var methodAttr = (Annotation.CoAPMethodAttribute)
+                            fieldOrProp.GetCustomAttribute(typeof(Annotation.CoAPMethodAttribute));
                         switch (methodAttr.Type)
                         {
                             case Annotation.CoAPMethodType.Get:

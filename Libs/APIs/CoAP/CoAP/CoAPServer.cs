@@ -23,9 +23,9 @@ namespace OpenTeleprompter.APIs.CoAP
                 BindingFlags.GetProperty | BindingFlags.GetField);
             foreach (var fieldOrProp in fieldsAndProps)
             {
-                var attr = (Annotation.CoAPResourceAttribute)fieldOrProp
-                    .GetCustomAttribute(typeof(Annotation.CoAPResourceAttribute));
-                if (attr != null)
+                bool isResourceAttrDefined = Attribute.IsDefined(fieldOrProp,
+                    typeof(Annotation.CoAPResourceAttribute));
+                if (isResourceAttrDefined)
                 {
                     if (fieldOrProp is FieldInfo field)
                     {
