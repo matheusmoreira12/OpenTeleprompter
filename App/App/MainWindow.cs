@@ -3,6 +3,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Timers;
 using Gtk;
+using OpenTeleprompter.APIs.CoAP;
+using OpenTeleprompter.APIs.CoAP.Annotation;
 using OpenTeleprompter.Data;
 using OpenTeleprompter.Data.Fonts;
 using OpenTeleprompter.Rendering.Renderers;
@@ -122,11 +124,30 @@ public partial class MainWindow : Gtk.Window
             }
             dr.State.ScrollY = sy;
         };
+
+        new MyServer();
     }
 
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)
     {
         Application.Quit();
         a.RetVal = true;
+    }
+}
+
+public class MyServer : CoAPServer
+{
+    public MyServer(params int[] ports) : base(ports)
+    {
+    }
+
+    [CoAPResource]
+    public MyResource Resource = new MyResource();
+}
+
+public class MyResource : CoAPResource
+{
+    public MyResource() : base(new Uri(""))
+    {
     }
 }

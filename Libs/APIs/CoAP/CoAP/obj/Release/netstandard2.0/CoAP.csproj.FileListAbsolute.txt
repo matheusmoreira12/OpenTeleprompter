@@ -1,9 +1,0 @@
-/home/fortes/Projects/OpenTeleprompter/Libs/APIs/CoAP/CoAP/bin/Release/netstandard2.0/CoAP.deps.json
-/home/fortes/Projects/OpenTeleprompter/Libs/APIs/CoAP/CoAP/bin/Release/netstandard2.0/CoAP.dll
-/home/fortes/Projects/OpenTeleprompter/Libs/APIs/CoAP/CoAP/bin/Release/netstandard2.0/CoAP.pdb
-/home/fortes/Projects/OpenTeleprompter/Libs/APIs/CoAP/CoAP/obj/Release/netstandard2.0/CoAP.AssemblyInfoInputs.cache
-/home/fortes/Projects/OpenTeleprompter/Libs/APIs/CoAP/CoAP/obj/Release/netstandard2.0/CoAP.AssemblyInfo.cs
-/home/fortes/Projects/OpenTeleprompter/Libs/APIs/CoAP/CoAP/obj/Release/netstandard2.0/CoAP.csproj.CoreCompileInputs.cache
-/home/fortes/Projects/OpenTeleprompter/Libs/APIs/CoAP/CoAP/obj/Release/netstandard2.0/CoAP.dll
-/home/fortes/Projects/OpenTeleprompter/Libs/APIs/CoAP/CoAP/obj/Release/netstandard2.0/CoAP.pdb
-/home/fortes/Projects/OpenTeleprompter/Libs/APIs/CoAP/CoAP/obj/Release/netstandard2.0/CoAP.csprojAssemblyReference.cache

@@ -19,7 +19,6 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile></DocumentationFile>
     <PlatformTarget>x86</PlatformTarget>
-    <AssemblyName></AssemblyName>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -76,8 +75,8 @@
     <Reference Include="System.Numerics" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="CoAP">
-      <HintPath>..\..\Libs\APIs\CoAP\CoAP\bin\Release\netstandard2.0\CoAP.dll</HintPath>
+    <Reference Include="OpenTeleprompter.APIs.CoAP">
+      <HintPath>..\..\Libs\APIs\OpenTeleprompter.APIs.CoAP\OpenTeleprompter.APIs.CoAP\bin\Release\netstandard2.0\OpenTeleprompter.APIs.CoAP.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

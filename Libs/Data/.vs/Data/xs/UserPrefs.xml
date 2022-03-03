@@ -17,7 +17,7 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Data" expanded="True">
-            <Node name="Data" expanded="True" selected="True">
+            <Node name="Data" expanded="True">
               <Node name="Dependencies" expanded="True">
                 <Node name="SdkDependencies" expanded="True" />
               </Node>
@@ -25,6 +25,7 @@
               <Node name="Fonts" expanded="True" />
               <Node name="Hierarchy" expanded="True" />
               <Node name="Validation" expanded="True" />
+              <Node name="DocumentReaderState.cs" selected="True" />
             </Node>
           </Node>
         </State>

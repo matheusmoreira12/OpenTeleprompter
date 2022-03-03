@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{1AD4F944-7D9B-4EAF-A1A0-FAD255B29B58}|Default">
   <MonoDevelop.Ide.ItemProperties.App PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="App/MainWindow.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="App/Program.cs">
     <Files>
-      <File FileName="App/MainWindow.cs" Line="134" Column="12" />
+      <File FileName="App/MainWindow.cs" Line="143" Column="5" />
+      <File FileName="App/Program.cs" Line="11" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,10 +13,13 @@
               <Node name="References" expanded="True" />
               <Node name="UserInterface" expanded="True" />
               <Node name="Properties" expanded="True" />
-              <Node name="MainWindow.cs" selected="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
