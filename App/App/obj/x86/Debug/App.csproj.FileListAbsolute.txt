@@ -120,5 +120,4 @@
 /home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/glade-sharp.dll.config
 /home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/pango-sharp.dll.config
 /home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/atk-sharp.dll.config
-/home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/OpenTeleprompter.APIs.CoAP.dll
 /home/fortes/Projects/OpenTeleprompter/App/App/bin/Debug/OpenTeleprompter.APIs.CoAP.pdb
