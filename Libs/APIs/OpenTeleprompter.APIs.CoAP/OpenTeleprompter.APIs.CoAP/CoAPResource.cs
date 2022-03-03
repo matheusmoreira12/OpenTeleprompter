@@ -18,49 +18,37 @@ namespace OpenTeleprompter.APIs.CoAP
         private void AssignMethods()
         {
             var type = GetType();
-            var fieldsAndProps = type.GetMembers(BindingFlags.Instance |
-                BindingFlags.GetProperty | BindingFlags.GetField);
-            foreach (var fieldOrProp in fieldsAndProps)
+            var methods = type.GetMethods();
+            foreach (var method in methods)
             {
-                bool isMethodAttrDefined = Attribute.IsDefined(fieldOrProp,
+                bool isMethodAttrDefined = Attribute.IsDefined(method,
                     typeof(Annotation.CoAPMethodAttribute));
                 if (isMethodAttrDefined)
                 {
-                    CoAPMethod method = null;
-                    if (fieldOrProp is FieldInfo field)
-                    {
-                        if (field.FieldType == typeof(CoAPResource))
-                            method = (CoAPMethod)field.GetValue(this);
-                    }
-                    else if (fieldOrProp is PropertyInfo property)
-                    {
-                        if (property.PropertyType == typeof(CoAPResource))
-                            method = (CoAPMethod)property.GetValue(this);
-                    }
-
                     if (method != null)
                     {
                         var methodAttr = (Annotation.CoAPMethodAttribute)
-                            fieldOrProp.GetCustomAttribute(typeof(Annotation.CoAPMethodAttribute));
+                            method.GetCustomAttribute(typeof(Annotation.CoAPMethodAttribute));
+                        var methodDelegate = (CoAPMethod)method.CreateDelegate(typeof(CoAPMethod));
                         switch (methodAttr.Type)
                         {
                             case Annotation.CoAPMethodType.Get:
-                                GetMethod = method;
+                                GetMethod = methodDelegate;
                                 break;
                             case Annotation.CoAPMethodType.Put:
-                                PutMethod = method;
+                                PutMethod = methodDelegate;
                                 break;
                             case Annotation.CoAPMethodType.Post:
-                                PostMethod = method;
+                                PostMethod = methodDelegate;
                                 break;
                             case Annotation.CoAPMethodType.Fetch:
-                                FetchMethod = method;
+                                FetchMethod = methodDelegate;
                                 break;
                             case Annotation.CoAPMethodType.Patch:
-                                PatchMethod = method;
+                                PatchMethod = methodDelegate;
                                 break;
                             case Annotation.CoAPMethodType.Delete:
-                                DeleteMethod = method;
+                                DeleteMethod = methodDelegate;
                                 break;
                         }
                     }

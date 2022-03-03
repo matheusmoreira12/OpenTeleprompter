@@ -1,16 +1,24 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="OpenTeleprompter.APIs.CoAP/CoAPServer.cs" Line="46" Column="48" />
+      <File FileName="OpenTeleprompter.APIs.CoAP/CoAPResource.cs" Line="63" Column="26" />
+      <File FileName="OpenTeleprompter.APIs.CoAP/InterfaceLayer/InventoryInitializer.cs" Line="2" Column="52" />
+      <File FileName="OpenTeleprompter.APIs.CoAP/InterfaceLayer/CoAPResource.cs" Line="1" Column="1" />
+      <File FileName="OpenTeleprompter.APIs.CoAP/CoAPMethod.cs" Line="5" Column="64" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="OpenTeleprompter.APIs.CoAP" expanded="True">
-            <Node name="OpenTeleprompter.APIs.CoAP" expanded="True" selected="True">
+            <Node name="OpenTeleprompter.APIs.CoAP" expanded="True">
               <Node name="Dependencies" expanded="True">
                 <Node name="PackageDependencies" expanded="True" />
                 <Node name="SdkDependencies" expanded="True" />
               </Node>
               <Node name="Annotation" expanded="True" />
               <Node name="InterfaceLayer" expanded="True" />
+              <Node name="CoAPMethod.cs" selected="True" />
             </Node>
           </Node>
         </State>

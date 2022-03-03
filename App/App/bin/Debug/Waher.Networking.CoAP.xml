@@ -1,0 +1,3229 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Waher.Networking.CoAP</name>
+    </assembly>
+    <members>
+        <member name="T:Waher.Networking.CoAP.CoapCode">
+            <summary>
+            CoAP Codes, as defined in §12.1 of RFC 7252:
+            https://tools.ietf.org/html/rfc7252#section-12.1
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.EmptyMessage">
+            <summary>
+            0.00
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.GET">
+            <summary>
+            0.01
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.POST">
+            <summary>
+            0.02
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.PUT">
+            <summary>
+            0.03
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.DELETE">
+            <summary>
+            0.04
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.FETCH">
+            <summary>
+            0.05
+            
+            Defined in: https://datatracker.ietf.org/doc/draft-ietf-core-etch/
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.PATCH">
+            <summary>
+            0.06
+            
+            Defined in: https://datatracker.ietf.org/doc/draft-ietf-core-etch/
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.iPATCH">
+            <summary>
+            0.07
+            
+            Defined in: https://datatracker.ietf.org/doc/draft-ietf-core-etch/
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.Created">
+            <summary>
+            2.01
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.Deleted">
+            <summary>
+            2.02
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.Valid">
+            <summary>
+            2.03
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.Changed">
+            <summary>
+            2.04
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.Content">
+            <summary>
+            2.05
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.Continue">
+            <summary>
+            2.31
+            
+            Defined in RFC 7959:
+            https://tools.ietf.org/html/rfc7959
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.BadRequest">
+            <summary>
+            4.00
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.Unauthorized">
+            <summary>
+            4.01
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.BadOption">
+            <summary>
+            4.02
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.Forbidden">
+            <summary>
+            4.03
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.NotFound">
+            <summary>
+            4.04
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.MethodNotAllowed">
+            <summary>
+            4.05
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.NotAcceptable">
+            <summary>
+            4.06
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.RequestEntityIncomplete">
+            <summary>
+            4.08
+            
+            Defined in RFC 7959:
+            https://tools.ietf.org/html/rfc7959
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.Conflict">
+            <summary>
+            4.09
+            
+            Defined in:
+            https://datatracker.ietf.org/doc/draft-ietf-core-etch/
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.PreconditionFailed">
+            <summary>
+            4.12
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.RequestEntityTooLarge">
+            <summary>
+            4.13
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.UnsupportedContentFormat">
+            <summary>
+            4.15
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.UnprocessableEntity">
+            <summary>
+            4.22
+            
+            Defined in:
+            https://datatracker.ietf.org/doc/draft-ietf-core-etch/
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.InternalServerError">
+            <summary>
+            5.00
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.NotImplemented">
+            <summary>
+            5.01
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.BadGateway">
+            <summary>
+            5.02
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.ServiceUnavailable">
+            <summary>
+            5.03
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.GatewayTimeout">
+            <summary>
+            5.04
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapCode.ProxyingNotSupported">
+            <summary>
+            5.05
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.CoapEndpoint">
+            <summary>
+            CoAP client. CoAP is defined in RFC7252:
+            https://tools.ietf.org/html/rfc7252
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapEndpoint.DefaultCoapPort">
+            <summary>
+            Default CoAP port = 5683
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapEndpoint.DefaultCoapsPort">
+            <summary>
+            Default CoAP over DTLS port = 5684
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.#ctor(Waher.Networking.Sniffers.ISniffer[])">
+            <summary>
+            CoAP client. CoAP is defined in RFC7252:
+            https://tools.ietf.org/html/rfc7252
+            </summary>
+            <param name="Sniffers">Optional set of sniffers to use.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.#ctor(System.Int32,Waher.Networking.Sniffers.ISniffer[])">
+            <summary>
+            CoAP client. CoAP is defined in RFC7252:
+            https://tools.ietf.org/html/rfc7252
+            </summary>
+            <param name="CoapPort">CoAP port number to listen for incoming unencrypted traffic.</param>
+            <param name="Sniffers">Optional set of sniffers to use.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.#ctor(System.Int32,Waher.Security.IUserSource,Waher.Networking.Sniffers.ISniffer[])">
+            <summary>
+            CoAP client. CoAP is defined in RFC7252:
+            https://tools.ietf.org/html/rfc7252
+            </summary>
+            <param name="CoapsPort">CoAPs port number to listen for incoming encrypted traffic.</param>
+            <param name="Users">User data source, if pre-shared keys should be allowed by a DTLS server endpoint.</param>
+            <param name="Sniffers">Optional set of sniffers to use.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.#ctor(System.Int32,Waher.Security.IUserSource,System.String,Waher.Networking.Sniffers.ISniffer[])">
+            <summary>
+            CoAP client. CoAP is defined in RFC7252:
+            https://tools.ietf.org/html/rfc7252
+            </summary>
+            <param name="CoapsPort">CoAPs port number to listen for incoming encrypted traffic.</param>
+            <param name="Users">User data source, if pre-shared keys should be allowed by a DTLS server endpoint.</param>
+            <param name="RequiredPrivilege">Required privilege, for the user to be acceptable
+            in PSK handshakes.</param>
+            <param name="Sniffers">Optional set of sniffers to use.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.#ctor(System.Int32[],System.Int32[],Waher.Security.IUserSource,System.String,System.Boolean,System.Boolean,Waher.Networking.Sniffers.ISniffer[])">
+            <summary>
+            CoAP client. CoAP is defined in RFC7252:
+            https://tools.ietf.org/html/rfc7252
+            </summary>
+            <param name="CoapPorts">CoAP port numbers, to listen for incoming unencrypted traffic.</param>
+            <param name="CoapsPorts">CoAPs port numbers, to listen for incoming encrypted traffic.</param>
+            <param name="Users">User data source, if pre-shared keys should be allowed by a DTLS server endpoint.</param>
+            <param name="RequiredPrivilege">Required privilege, for the user to be acceptable
+            in PSK handshakes.</param>
+            <param name="LoopbackTransmission">If transmission on the loopback interface should be permitted.</param>
+            <param name="LoopbackReception">If reception on the loopback interface should be permitted.</param>
+            <param name="Sniffers">Optional set of sniffers to use.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Dispose">
+            <summary>
+            <see cref="M:System.IDisposable.Dispose"/>
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Register(Waher.Networking.CoAP.CoapResource)">
+            <summary>
+            Registers a CoAP resource on the endpoint.
+            </summary>
+            <param name="Resource">Resource to register.</param>
+            <returns>Returns the registered resource.</returns>
+            <exception cref="T:System.Exception">If a resource with the same path has already been registered.</exception>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Register(System.String,Waher.Networking.CoAP.CoapMethodHandler)">
+            <summary>
+            Registers a CoAP resource serving the GET method on the endpoint.
+            </summary>
+            <param name="Path">Path to resource.</param>
+            <param name="GET">GET method handler.</param>
+            <returns>Returns the registered resource.</returns>
+            <exception cref="T:System.Exception">If a resource with the same path has already been registered.</exception>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Register(System.String,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.Notifications)">
+            <summary>
+            Registers a CoAP resource serving the GET method on the endpoint.
+            </summary>
+            <param name="Path">Path to resource.</param>
+            <param name="GET">GET method handler.</param>
+            <param name="Notifications">If the resource is observable, and how notifications are to be sent.</param>
+            <returns>Returns the registered resource.</returns>
+            <exception cref="T:System.Exception">If a resource with the same path has already been registered.</exception>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Register(System.String,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.Notifications,System.String)">
+            <summary>
+            Registers a CoAP resource serving the GET method on the endpoint.
+            </summary>
+            <param name="Path">Path to resource.</param>
+            <param name="GET">GET method handler.</param>
+            <param name="Notifications">If the resource is observable, and how notifications are to be sent.</param>
+            <param name="Title">Optional CoRE title. Can be null.</param>
+            <returns>Returns the registered resource.</returns>
+            <exception cref="T:System.Exception">If a resource with the same path has already been registered.</exception>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Register(System.String,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.Notifications,System.String,System.String[])">
+            <summary>
+            Registers a CoAP resource serving the GET method on the endpoint.
+            </summary>
+            <param name="Path">Path to resource.</param>
+            <param name="GET">GET method handler.</param>
+            <param name="Notifications">If the resource is observable, and how notifications are to be sent.</param>
+            <param name="Title">Optional CoRE title. Can be null.</param>
+            <param name="ResourceTypes">Optional set of CoRE resource types. Can be null or empty.</param>
+            <returns>Returns the registered resource.</returns>
+            <exception cref="T:System.Exception">If a resource with the same path has already been registered.</exception>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Register(System.String,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.Notifications,System.String,System.String[],System.String[])">
+            <summary>
+            Registers a CoAP resource serving the GET method on the endpoint.
+            </summary>
+            <param name="Path">Path to resource.</param>
+            <param name="GET">GET method handler.</param>
+            <param name="Notifications">If the resource is observable, and how notifications are to be sent.</param>
+            <param name="Title">Optional CoRE title. Can be null.</param>
+            <param name="ResourceTypes">Optional set of CoRE resource types. Can be null or empty.</param>
+            <param name="InterfaceDescriptions">Optional set of CoRE interface descriptions. Can be null or empty.</param>
+            <returns>Returns the registered resource.</returns>
+            <exception cref="T:System.Exception">If a resource with the same path has already been registered.</exception>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Register(System.String,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.Notifications,System.String,System.String[],System.String[],System.Int32[])">
+            <summary>
+            Registers a CoAP resource serving the GET method on the endpoint.
+            </summary>
+            <param name="Path">Path to resource.</param>
+            <param name="GET">GET method handler.</param>
+            <param name="Notifications">If the resource is observable, and how notifications are to be sent.</param>
+            <param name="Title">Optional CoRE title. Can be null.</param>
+            <param name="ResourceTypes">Optional set of CoRE resource types. Can be null or empty.</param>
+            <param name="InterfaceDescriptions">Optional set of CoRE interface descriptions. Can be null or empty.</param>
+            <param name="ContentFormats">Optional set of content format representations supported by the resource. Can be null or empty.</param>
+            <returns>Returns the registered resource.</returns>
+            <exception cref="T:System.Exception">If a resource with the same path has already been registered.</exception>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Register(System.String,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.Notifications,System.String,System.String[],System.String[],System.Int32[],System.Nullable{System.Int32})">
+            <summary>
+            Registers a CoAP resource serving the GET method on the endpoint.
+            </summary>
+            <param name="Path">Path to resource.</param>
+            <param name="GET">GET method handler.</param>
+            <param name="Notifications">If the resource is observable, and how notifications are to be sent.</param>
+            <param name="Title">Optional CoRE title. Can be null.</param>
+            <param name="ResourceTypes">Optional set of CoRE resource types. Can be null or empty.</param>
+            <param name="InterfaceDescriptions">Optional set of CoRE interface descriptions. Can be null or empty.</param>
+            <param name="ContentFormats">Optional set of content format representations supported by the resource. Can be null or empty.</param>
+            <param name="MaximumSizeEstimate">Optional maximum size estimate of resource. Can be null.</param>
+            <returns>Returns the registered resource.</returns>
+            <exception cref="T:System.Exception">If a resource with the same path has already been registered.</exception>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Register(System.String,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.CoapMethodHandler)">
+            <summary>
+            Registers a CoAP resource serving the GET method on the endpoint.
+            </summary>
+            <param name="Path">Path to resource.</param>
+            <param name="GET">GET method handler.</param>
+            <param name="POST">POST method handler.</param>
+            <returns>Returns the registered resource.</returns>
+            <exception cref="T:System.Exception">If a resource with the same path has already been registered.</exception>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Register(System.String,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.Notifications)">
+            <summary>
+            Registers a CoAP resource serving the GET method on the endpoint.
+            </summary>
+            <param name="Path">Path to resource.</param>
+            <param name="GET">GET method handler.</param>
+            <param name="POST">POST method handler.</param>
+            <param name="Notifications">If the resource is observable, and how notifications are to be sent.</param>
+            <returns>Returns the registered resource.</returns>
+            <exception cref="T:System.Exception">If a resource with the same path has already been registered.</exception>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Register(System.String,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.Notifications,System.String)">
+            <summary>
+            Registers a CoAP resource serving the GET method on the endpoint.
+            </summary>
+            <param name="Path">Path to resource.</param>
+            <param name="GET">GET method handler.</param>
+            <param name="POST">POST method handler.</param>
+            <param name="Notifications">If the resource is observable, and how notifications are to be sent.</param>
+            <param name="Title">Optional CoRE title. Can be null.</param>
+            <returns>Returns the registered resource.</returns>
+            <exception cref="T:System.Exception">If a resource with the same path has already been registered.</exception>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Register(System.String,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.Notifications,System.String,System.String[])">
+            <summary>
+            Registers a CoAP resource serving the GET method on the endpoint.
+            </summary>
+            <param name="Path">Path to resource.</param>
+            <param name="GET">GET method handler.</param>
+            <param name="POST">POST method handler.</param>
+            <param name="Notifications">If the resource is observable, and how notifications are to be sent.</param>
+            <param name="Title">Optional CoRE title. Can be null.</param>
+            <param name="ResourceTypes">Optional set of CoRE resource types. Can be null or empty.</param>
+            <returns>Returns the registered resource.</returns>
+            <exception cref="T:System.Exception">If a resource with the same path has already been registered.</exception>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Register(System.String,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.Notifications,System.String,System.String[],System.String[])">
+            <summary>
+            Registers a CoAP resource serving the GET method on the endpoint.
+            </summary>
+            <param name="Path">Path to resource.</param>
+            <param name="GET">GET method handler.</param>
+            <param name="POST">POST method handler.</param>
+            <param name="Notifications">If the resource is observable, and how notifications are to be sent.</param>
+            <param name="Title">Optional CoRE title. Can be null.</param>
+            <param name="ResourceTypes">Optional set of CoRE resource types. Can be null or empty.</param>
+            <param name="InterfaceDescriptions">Optional set of CoRE interface descriptions. Can be null or empty.</param>
+            <returns>Returns the registered resource.</returns>
+            <exception cref="T:System.Exception">If a resource with the same path has already been registered.</exception>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Register(System.String,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.Notifications,System.String,System.String[],System.String[],System.Int32[])">
+            <summary>
+            Registers a CoAP resource serving the GET method on the endpoint.
+            </summary>
+            <param name="Path">Path to resource.</param>
+            <param name="GET">GET method handler.</param>
+            <param name="POST">POST method handler.</param>
+            <param name="Notifications">If the resource is observable, and how notifications are to be sent.</param>
+            <param name="Title">Optional CoRE title. Can be null.</param>
+            <param name="ResourceTypes">Optional set of CoRE resource types. Can be null or empty.</param>
+            <param name="InterfaceDescriptions">Optional set of CoRE interface descriptions. Can be null or empty.</param>
+            <param name="ContentFormats">Optional set of content format representations supported by the resource. Can be null or empty.</param>
+            <returns>Returns the registered resource.</returns>
+            <exception cref="T:System.Exception">If a resource with the same path has already been registered.</exception>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Register(System.String,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.Notifications,System.String,System.String[],System.String[],System.Int32[],System.Nullable{System.Int32})">
+            <summary>
+            Registers a CoAP resource serving the GET method on the endpoint.
+            </summary>
+            <param name="Path">Path to resource.</param>
+            <param name="GET">GET method handler.</param>
+            <param name="POST">POST method handler.</param>
+            <param name="Notifications">If the resource is observable, and how notifications are to be sent.</param>
+            <param name="Title">Optional CoRE title. Can be null.</param>
+            <param name="ResourceTypes">Optional set of CoRE resource types. Can be null or empty.</param>
+            <param name="InterfaceDescriptions">Optional set of CoRE interface descriptions. Can be null or empty.</param>
+            <param name="ContentFormats">Optional set of content format representations supported by the resource. Can be null or empty.</param>
+            <param name="MaximumSizeEstimate">Optional maximum size estimate of resource. Can be null.</param>
+            <returns>Returns the registered resource.</returns>
+            <exception cref="T:System.Exception">If a resource with the same path has already been registered.</exception>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.GetResources">
+            <summary>
+            Gets an array of registered resources.
+            </summary>
+            <returns>Resources.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Unregister(Waher.Networking.CoAP.CoapResource)">
+            <summary>
+            Unregisters a CoAP resource.
+            </summary>
+            <param name="Resource">Resource to unregister.</param>
+            <returns>If the resource was found and removed.</returns>
+        </member>
+        <member name="E:Waher.Networking.CoAP.CoapEndpoint.OnIncomingRequest">
+            <summary>
+            Event raised when an incoming requestm that does not correspond to a registered resource has been received.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.HasOption(Waher.Networking.CoAP.CoapOption[],System.Int32)">
+            <summary>
+            Checks if an array of options contains a given option number.
+            </summary>
+            <param name="Options">Array of options. Can be null or empty.</param>
+            <param name="OptionNumber">Option number to check for.</param>
+            <returns>If an option with the given option number was found.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Remove(Waher.Networking.CoAP.CoapOption[],System.Int32)">
+            <summary>
+            Removes options of a given type from a set of options.
+            </summary>
+            <param name="Options">Original set of options.</param>
+            <param name="OptionNumber">Option number to remove.</param>
+            <returns>Potentially new set of options.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Merge(Waher.Networking.CoAP.CoapOption[],Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Merges two sets of options.
+            </summary>
+            <param name="Options1">First set of options.</param>
+            <param name="Options2">Second set of options.</param>
+            <returns>Merged set of options.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.TryGetContentFormat(System.Int32,Waher.Networking.CoAP.ICoapContentFormat@)">
+            <summary>
+            Tries to get a CoAP Content Format object, that can be used to decode content.
+            </summary>
+            <param name="ContentFormat">Content format number.</param>
+            <param name="Format">Content format object.</param>
+            <returns>If a content format was found.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.TryGetContentFormat(System.String,Waher.Networking.CoAP.ICoapContentFormat@)">
+            <summary>
+            Tries to get a CoAP Content Format object, that can be used to encode content.
+            </summary>
+            <param name="ContentType">Internet Content Type.</param>
+            <param name="Format">Content format object.</param>
+            <returns>If a content format was found.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Decode(System.Int32,System.Byte[],System.Uri)">
+            <summary>
+            Tries to decode CoAP content.
+            </summary>
+            <param name="ContentFormat">Content format.</param>
+            <param name="Payload">Payload.</param>
+            <param name="BaseUri">Base URI, if any. If not available, value is null.</param>
+            <returns>Decoded object.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.DecodeAsync(System.Int32,System.Byte[],System.Uri)">
+            <summary>
+            Tries to decode CoAP content.
+            </summary>
+            <param name="ContentFormat">Content format.</param>
+            <param name="Payload">Payload.</param>
+            <param name="BaseUri">Base URI, if any. If not available, value is null.</param>
+            <returns>Decoded object.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Encode(System.Object,System.Int32@)">
+            <summary>
+            Tries to encode CoAP content.
+            </summary>
+            <param name="Payload">Payload.</param>
+            <param name="ContentFormat">Content format of encoded content.</param>
+            <returns>Decoded object.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.EncodeAsync(System.Object)">
+            <summary>
+            Tries to encode CoAP content.
+            </summary>
+            <param name="Payload">Payload.</param>
+            <returns>Decoded object and Content format of encoded content..</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.GetActiveTokens">
+            <summary>
+            Gets an array of active tokens.
+            </summary>
+            <returns>Array of active tokens.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.GetActiveMessageIDs">
+            <summary>
+            Gets an array of active message IDs.
+            </summary>
+            <returns>Array of active message IDs.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.GetRegisteredResources">
+            <summary>
+            Gets an array of registered resources.
+            </summary>
+            <returns>Registered resources.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.GET(System.Net.IPEndPoint,System.Boolean,System.Boolean,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Performs a GET operation.
+            </summary>
+            <param name="Destination">Request resource from this locaton.</param>
+            <param name="Encrypted">If encrypted message service (DTLS) is to be used.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.GET(System.String,System.Int32,System.Boolean,System.Boolean,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Performs a GET operation.
+            </summary>
+            <param name="Destination">Request resource from this locaton.</param>
+            <param name="Port">Port number of destination.</param>
+            <param name="Encrypted">If encrypted message service (DTLS) is to be used.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.GET(System.String,System.Boolean,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Performs a GET operation.
+            </summary>
+            <param name="Uri">URI pointing out resource.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.GET(System.Uri,System.Boolean,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Performs a GET operation.
+            </summary>
+            <param name="Uri">URI pointing out resource.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Observe(System.Net.IPEndPoint,System.Boolean,System.Boolean,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Performs an Observe operation.
+            
+            Call <see cref="M:Waher.Networking.CoAP.CoapEndpoint.UnregisterObservation(System.Net.IPEndPoint,System.Boolean,System.Boolean,System.UInt64,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])"/> 
+            to cancel an active observation.
+            </summary>
+            <param name="Destination">Request resource from this locaton.</param>
+            <param name="Encrypted">If encrypted message service (DTLS) is to be used.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Observe(System.String,System.Int32,System.Boolean,System.Boolean,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Performs an Observe operation.
+            
+            Call <see cref="M:Waher.Networking.CoAP.CoapEndpoint.UnregisterObservation(System.String,System.Int32,System.Boolean,System.Boolean,System.UInt64,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])"/> 
+            to cancel an active observation.
+            </summary>
+            <param name="Destination">Request resource from this locaton.</param>
+            <param name="Port">Port number of destination.</param>
+            <param name="Encrypted">If encrypted message service (DTLS) is to be used.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Observe(System.String,System.Boolean,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Performs an Observe operation.
+            
+            Call <see cref="M:Waher.Networking.CoAP.CoapEndpoint.UnregisterObservation(System.String,System.Boolean,System.UInt64,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])"/> 
+            to cancel an active observation.
+            </summary>
+            <param name="Uri">URI pointing out resource.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.Observe(System.Uri,System.Boolean,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Performs an Observe operation.
+            
+            Call <see cref="M:Waher.Networking.CoAP.CoapEndpoint.UnregisterObservation(System.Uri,System.Boolean,System.UInt64,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])"/> 
+            to cancel an active observation.
+            </summary>
+            <param name="Uri">URI pointing out resource.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.UnregisterObservation(System.Net.IPEndPoint,System.Boolean,System.Boolean,System.UInt64,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Unregisters an active observation registration made by <see cref="M:Waher.Networking.CoAP.CoapEndpoint.Observe(System.Net.IPEndPoint,System.Boolean,System.Boolean,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])"/>.
+            </summary>
+            <param name="Destination">Request resource from this locaton.</param>
+            <param name="Encrypted">If encrypted message service (DTLS) is to be used.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Token">Registration token.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.UnregisterObservation(System.String,System.Int32,System.Boolean,System.Boolean,System.UInt64,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Unregisters an active observation registration made by <see cref="M:Waher.Networking.CoAP.CoapEndpoint.Observe(System.String,System.Boolean,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])"/>.
+            </summary>
+            <param name="Destination">Request resource from this locaton.</param>
+            <param name="Port">Port number of destination.</param>
+            <param name="Encrypted">If encrypted message service (DTLS) is to be used.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Token">Registration token.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.UnregisterObservation(System.String,System.Boolean,System.UInt64,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Unregisters an active observation registration made by <see cref="M:Waher.Networking.CoAP.CoapEndpoint.Observe(System.String,System.Int32,System.Boolean,System.Boolean,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])"/>
+            </summary>
+            <param name="Uri">URI pointing out resource.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Token">Registration token.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.UnregisterObservation(System.Uri,System.Boolean,System.UInt64,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Unregisters an active observation registration made by <see cref="M:Waher.Networking.CoAP.CoapEndpoint.Observe(System.Uri,System.Boolean,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])"/>
+            </summary>
+            <param name="Uri">URI pointing out resource.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Token">Registration token.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.POST(System.Net.IPEndPoint,System.Boolean,System.Boolean,System.Byte[],System.Int32,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Performs a POST operation.
+            </summary>
+            <param name="Destination">Request resource from this locaton.</param>
+            <param name="Encrypted">If encrypted message service (DTLS) is to be used.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Payload">Payload to post.</param>
+            <param name="BlockSize">Block size, in case payload needs to be divided into blocks.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.POST(System.String,System.Int32,System.Boolean,System.Boolean,System.Byte[],System.Int32,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Performs a POST operation.
+            </summary>
+            <param name="Destination">Request resource from this locaton.</param>
+            <param name="Port">Port number of destination.</param>
+            <param name="Encrypted">If encrypted message service (DTLS) is to be used.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Payload">Payload to post.</param>
+            <param name="BlockSize">Block size, in case payload needs to be divided into blocks.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.POST(System.String,System.Boolean,System.Byte[],System.Int32,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Performs a POST operation.
+            </summary>
+            <param name="Uri">URI pointing out resource.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Payload">Payload to post.</param>
+            <param name="BlockSize">Block size, in case payload needs to be divided into blocks.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.POST(System.Uri,System.Boolean,System.Byte[],System.Int32,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Performs a POST operation.
+            </summary>
+            <param name="Uri">URI pointing out resource.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Payload">Payload to post.</param>
+            <param name="BlockSize">Block size, in case payload needs to be divided into blocks.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.PUT(System.Net.IPEndPoint,System.Boolean,System.Boolean,System.Byte[],System.Int32,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Performs a PUT operation.
+            </summary>
+            <param name="Destination">Request resource from this locaton.</param>
+            <param name="Encrypted">If encrypted message service (DTLS) is to be used.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Payload">Payload to post.</param>
+            <param name="BlockSize">Block size, in case payload needs to be divided into blocks.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.PUT(System.String,System.Boolean,System.Int32,System.Boolean,System.Byte[],System.Int32,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Performs a PUT operation.
+            </summary>
+            <param name="Destination">Request resource from this locaton.</param>
+            <param name="Port">Port number of destination.</param>
+            <param name="Encrypted">If encrypted message service (DTLS) is to be used.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Payload">Payload to post.</param>
+            <param name="BlockSize">Block size, in case payload needs to be divided into blocks.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.PUT(System.String,System.Boolean,System.Byte[],System.Int32,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Performs a PUT operation.
+            </summary>
+            <param name="Uri">URI pointing out resource.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Payload">Payload to post.</param>
+            <param name="BlockSize">Block size, in case payload needs to be divided into blocks.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.PUT(System.Uri,System.Boolean,System.Byte[],System.Int32,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Performs a PUT operation.
+            </summary>
+            <param name="Uri">URI pointing out resource.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Payload">Payload to post.</param>
+            <param name="BlockSize">Block size, in case payload needs to be divided into blocks.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.DELETE(System.Net.IPEndPoint,System.Boolean,System.Boolean,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Performs a DELETE operation.
+            </summary>
+            <param name="Destination">Request resource from this locaton.</param>
+            <param name="Encrypted">If encrypted message service (DTLS) is to be used.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.DELETE(System.String,System.Int32,System.Boolean,System.Boolean,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Performs a DELETE operation.
+            </summary>
+            <param name="Destination">Request resource from this locaton.</param>
+            <param name="Port">Port number of destination.</param>
+            <param name="Encrypted">If encrypted message service (DTLS) is to be used.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.DELETE(System.String,System.Boolean,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Performs a DELETE operation.
+            </summary>
+            <param name="Uri">URI pointing out resource.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.DELETE(System.Uri,System.Boolean,Waher.Security.DTLS.IDtlsCredentials,Waher.Networking.CoAP.CoapResponseEventHandler,System.Object,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Performs a DELETE operation.
+            </summary>
+            <param name="Uri">URI pointing out resource.</param>
+            <param name="Acknowledged">If acknowledged message service is to be used.</param>
+            <param name="Credentials">Optional credentials.</param>
+            <param name="Callback">Callback method to call when response is returned.</param>
+            <param name="State">State object to pass on to callback method.</param>
+            <param name="Options">CoAP options to include in the request.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.ScheduleEvent(Waher.Runtime.Timing.ScheduledEventCallback,System.DateTime,System.Object)">
+            <summary>
+            Schedules a one-time event.
+            </summary>
+            <param name="Callback">Method to call when event is due.</param>
+            <param name="When">When the event is to be executed.</param>
+            <param name="State">State object</param>
+            <returns>Timepoint of when event was scheduled.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapEndpoint.CancelScheduledEvent(System.DateTime)">
+            <summary>
+            Cancels a scheduled event.
+            </summary>
+            <param name="When">When event is scheduled</param>
+            <returns>If event was found and removed.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.CoapException">
+            <summary>
+            CoAP Exception
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapException.#ctor(Waher.Networking.CoAP.CoapCode)">
+            <summary>
+            CoAP Exception
+            </summary>
+            <param name="ErrorCode">Error code.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapException.ErrorCode">
+            <summary>
+            CoAP error code.
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.CoapGetDelegateResource">
+            <summary>
+            CoAP resource defined by a GET delegate method.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapGetDelegateResource.#ctor(System.String,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.Notifications,System.String,System.String[],System.String[],System.Int32[],System.Nullable{System.Int32})">
+            <summary>
+            CoAP resource defined by a GET delegate method.
+            </summary>
+            <param name="ResourceName">Name of resource.</param>
+            <param name="GET">GET Method.</param>
+            <param name="Notifications">If the resource is observable, and how notifications are to be sent.</param>
+            <param name="Title">Optional CoRE title. Can be null.</param>
+            <param name="ResourceTypes">Optional set of CoRE resource types. Can be null or empty.</param>
+            <param name="InterfaceDescriptions">Optional set of CoRE interface descriptions. Can be null or empty.</param>
+            <param name="ContentFormats">Optional set of content format representations supported by the resource. Can be null or empty.</param>
+            <param name="MaximumSizeEstimate">Optional maximum size estimate of resource. Can be null.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapGetDelegateResource.Title">
+            <summary>
+            Optional title of resource.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapGetDelegateResource.ResourceTypes">
+            <summary>
+            Optional resource type.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapGetDelegateResource.InterfaceDescriptions">
+            <summary>
+            Optional interface descriptions.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapGetDelegateResource.Notifications">
+            <summary>
+            If the resource is observable, and how notifications are to be sent.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapGetDelegateResource.MaximumSizeEstimate">
+            <summary>
+            Optional maximum size estimate.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapGetDelegateResource.ContentFormats">
+            <summary>
+            Optional array of supported content formats.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapGetDelegateResource.AllowsGET">
+            <summary>
+            If the GET method is allowed.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapGetDelegateResource.GET(Waher.Networking.CoAP.CoapMessage,Waher.Networking.CoAP.CoapResponse)">
+            <summary>
+            Executes the GET method on the resource.
+            </summary>
+            <param name="Request">CoAP Request</param>
+            <param name="Response">CoAP Response</param>
+            <exception cref="T:Waher.Networking.CoAP.CoapException">If an error occurred when processing the method.</exception>
+        </member>
+        <member name="T:Waher.Networking.CoAP.CoapGetPostDelegateResource">
+            <summary>
+            CoAP resource defined by GET and POST delegate methods.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapGetPostDelegateResource.#ctor(System.String,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.CoapMethodHandler,Waher.Networking.CoAP.Notifications,System.String,System.String[],System.String[],System.Int32[],System.Nullable{System.Int32})">
+            <summary>
+            CoAP resource defined by GET and POST delegate methods.
+            </summary>
+            <param name="ResourceName">Name of resource.</param>
+            <param name="GET">GET Method.</param>
+            <param name="POST">POST Method.</param>
+            <param name="Notifications">If the resource is observable, and how notifications are to be sent.</param>
+            <param name="Title">Optional CoRE title. Can be null.</param>
+            <param name="ResourceTypes">Optional set of CoRE resource types. Can be null or empty.</param>
+            <param name="InterfaceDescriptions">Optional set of CoRE interface descriptions. Can be null or empty.</param>
+            <param name="ContentFormats">Optional set of content format representations supported by the resource. Can be null or empty.</param>
+            <param name="MaximumSizeEstimate">Optional maximum size estimate of resource. Can be null.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapGetPostDelegateResource.AllowsPOST">
+            <summary>
+            If the POST method is allowed.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapGetPostDelegateResource.POST(Waher.Networking.CoAP.CoapMessage,Waher.Networking.CoAP.CoapResponse)">
+            <summary>
+            Executes the POST method on the resource.
+            </summary>
+            <param name="Request">CoAP Request</param>
+            <param name="Response">CoAP Response</param>
+            <exception cref="T:Waher.Networking.CoAP.CoapException">If an error occurred when processing the method.</exception>
+        </member>
+        <member name="T:Waher.Networking.CoAP.CoapMessage">
+            <summary>
+            Contains information about a CoAP message.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.Type">
+            <summary>
+            Type of message.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.Code">
+            <summary>
+            Message code.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.MessageId">
+            <summary>
+            Message ID.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.Token">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.Options">
+            <summary>
+            Available options.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.Payload">
+            <summary>
+            Payload, if available, or null otherwise.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.BaseUri">
+            <summary>
+            Base URI, if available, or null otherwise.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.From">
+            <summary>
+            From where the message came.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.Accept">
+            <summary>
+            Optional accept option.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.ContentFormat">
+            <summary>
+            Optional content format option.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.UriQuery">
+            <summary>
+            Optional URI query parameters.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapMessage.TryGetUriQueryParameter(System.String,System.String@)">
+            <summary>
+            Tries to get a URI query parameter value.
+            </summary>
+            <param name="Name">Parameter name.</param>
+            <param name="Value">Parameter value.</param>
+            <returns>If a parameter with the gíven name was found.</returns>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.Port">
+            <summary>
+            Optional URI Port number option.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.Host">
+            <summary>
+            Optional URI Host option.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.Path">
+            <summary>
+            Optional URI Path options, appended into a path string.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.SubPath">
+            <summary>
+            Part of the <see cref="P:Waher.Networking.CoAP.CoapMessage.Path"/> not matched by the corresponding resource
+            processing the message, in case the resource supports subpaths.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.MaxAge">
+            <summary>
+            Max Age option (number of seconds).
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.LocationPath">
+            <summary>
+            Optional Location Path options, appended into a path string.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.LocationQuery">
+            <summary>
+            Optional Location Query parameters.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapMessage.TryGetLocationQueryParameter(System.String,System.String@)">
+            <summary>
+            Tries to get a Location query parameter value.
+            </summary>
+            <param name="Name">Parameter  name.</param>
+            <param name="Value">Parameter value.</param>
+            <returns>If a location parameter was found with the given name.</returns>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.Size1">
+            <summary>
+            Optional Size1 option.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.Size2">
+            <summary>
+            Optional Size2 option.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.Block1">
+            <summary>
+            Optional Block1 option (request payload).
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.Block2">
+            <summary>
+            Optional Block2 option (response payload).
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessage.Observe">
+            <summary>
+            Optional Observe option.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapMessage.GetUri">
+            <summary>
+            Generates an URI for the message.
+            </summary>
+            <returns>URI string.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapMessage.Decode">
+            <summary>
+            Decodes the payload of the message.
+            </summary>
+            <returns>Decoded payload.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapMessage.DecodeAsync">
+            <summary>
+            Decodes the payload of the message.
+            </summary>
+            <returns>Decoded payload.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapMessage.IsAcceptable(System.Int32)">
+            <summary>
+            Checks if a given content format is acceptable to the client.
+            </summary>
+            <param name="ContentFormat">Content Format to check.</param>
+            <returns>If the content format is acceptable or not.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.CoapMessageEventHandler">
+            <summary>
+            Delegate for CoAP message events
+            </summary>
+            <param name="Sender">Sender of event.</param>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="T:Waher.Networking.CoAP.CoapMessageEventArgs">
+            <summary>
+            Event arguments for CoAP message callbacks.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapMessageEventArgs.#ctor(Waher.Networking.CoAP.Transport.ClientBase,Waher.Networking.CoAP.CoapEndpoint,Waher.Networking.CoAP.CoapMessage,Waher.Networking.CoAP.CoapResource)">
+            <summary>
+            Event arguments for CoAP response callbacks.
+            </summary>
+            <param name="Client">UDP Client.</param>
+            <param name="Endpoint">CoAP Endpoint.</param>
+            <param name="Message">CoAP message.</param>
+            <param name="Resource">CoAP resource if relevant.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessageEventArgs.Client">
+            <summary>
+            UDP Client through which the message was received.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessageEventArgs.Resource">
+            <summary>
+            CoAP resource, if relevant.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessageEventArgs.Endpoint">
+            <summary>
+            CoAP Endpoint.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessageEventArgs.Message">
+            <summary>
+            CoAP message received.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapMessageEventArgs.Responded">
+            <summary>
+            If a response has been returned.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapMessageEventArgs.Respond(Waher.Networking.CoAP.CoapCode,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Returns a response to the caller.
+            </summary>
+            <param name="Code">CoAP message code.</param>
+            <param name="Options">Optional options.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapMessageEventArgs.Respond(Waher.Networking.CoAP.CoapCode,System.Object,System.Int32,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Returns a response to the caller.
+            </summary>
+            <param name="Code">CoAP message code.</param>
+            <param name="Payload">Optional payload to be encoded.</param>
+            <param name="BlockSize">Block size, in case the <paramref name="Payload"/> needs to be divided into blocks.</param>
+            <param name="Options">Optional options.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapMessageEventArgs.RespondAsync(Waher.Networking.CoAP.CoapCode,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Returns a response to the caller.
+            </summary>
+            <param name="Code">CoAP message code.</param>
+            <param name="Options">Optional options.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapMessageEventArgs.RespondAsync(Waher.Networking.CoAP.CoapCode,System.Object,System.Int32,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Returns a response to the caller.
+            </summary>
+            <param name="Code">CoAP message code.</param>
+            <param name="Payload">Optional payload to be encoded.</param>
+            <param name="BlockSize">Block size, in case the <paramref name="Payload"/> needs to be divided into blocks.</param>
+            <param name="Options">Optional options.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapMessageEventArgs.Respond(Waher.Networking.CoAP.CoapCode,System.Byte[],System.Int32,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Returns a response to the caller.
+            </summary>
+            <param name="Code">CoAP message code.</param>
+            <param name="Payload">Optional payload.</param>
+            <param name="BlockSize">Block size, in case the <paramref name="Payload"/> needs to be divided into blocks.</param>
+            <param name="Options">Optional options.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapMessageEventArgs.ACK">
+            <summary>
+            Returns an acknowledgement.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapMessageEventArgs.ACK(Waher.Networking.CoAP.CoapCode)">
+            <summary>
+            Returns an acknowledgement.
+            </summary>
+            <param name="Code">CoAP message code.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapMessageEventArgs.RST">
+            <summary>
+            Returns a reset message.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapMessageEventArgs.RST(Waher.Networking.CoAP.CoapCode)">
+            <summary>
+            Returns a reset message.
+            </summary>
+            <param name="Code">CoAP message code.</param>
+        </member>
+        <member name="T:Waher.Networking.CoAP.CoapMessageType">
+            <summary>
+            CoAP Message Type
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapMessageType.CON">
+            <summary>
+            Confirmable
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapMessageType.NON">
+            <summary>
+            Non-confirmable
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapMessageType.ACK">
+            <summary>
+            Acknowledgement
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.CoapMessageType.RST">
+            <summary>
+            Reset
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.CoapOption">
+            <summary>
+            Base class for all CoAP options.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapOption.#ctor">
+            <summary>
+            Base class for all CoAP options.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapOption.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapOption.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapOption.GetValue">
+            <summary>
+            Gets the option value.
+            </summary>
+            <returns>Binary value. Can be null, if option does not have a value.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapOption.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapOption.ToBinary(System.UInt64)">
+            <summary>
+            Transforms an unsigned integer to a variable sized option value.
+            </summary>
+            <param name="Value">Value.</param>
+            <returns>Binary variable length option value.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapOption.ToBinary(System.String)">
+            <summary>
+            Transforms a string to a variable sized option value.
+            </summary>
+            <param name="Value">Value.</param>
+            <returns>Binary variable length option value.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapOption.ToString">
+            <summary>
+            <see cref="M:System.Object.ToString"/>
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.CoapOptionComparer">
+            <summary>
+            CoAP Option Comparer. Can be used to sort options in ascending number order.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapOptionComparer.#ctor">
+            <summary>
+            CoAP Option Comparer. Can be used to sort options in ascending number order.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapOptionComparer.Compare(Waher.Networking.CoAP.CoapOption,Waher.Networking.CoAP.CoapOption)">
+            <summary>
+            <see cref="M:System.Collections.Generic.IComparer`1.Compare(`0,`0)"/>
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Notifications">
+            <summary>
+            Determines if the resource is observable, and how notifications are sent.
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.Notifications.None">
+            <summary>
+            Resource is not observable.
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.Notifications.Acknowledged">
+            <summary>
+            Resource is observable, and notifications are sent using CONfirmable messages.
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.Notifications.Unacknowledged">
+            <summary>
+            Resource is observable, and notifications are sent using NON-confirmable messages.
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.CoapResource">
+            <summary>
+            Base class for CoAP resources.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapResource.#ctor(System.String)">
+            <summary>
+            Base class for CoAP resources.
+            </summary>
+            <param name="Path">Path of resource.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResource.Path">
+            <summary>
+            Path of resource.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResource.HandlesSubPaths">
+            <summary>
+            If the resource handles subpaths.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResource.GetMethod">
+            <summary>
+            GET method interface, if any.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResource.PostMethod">
+            <summary>
+            POST method interface, if any.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResource.PutMethod">
+            <summary>
+            PUT method interface, if any.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResource.DeleteMethod">
+            <summary>
+            DELETE method interface, if any.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResource.FetchMethod">
+            <summary>
+            FETCH method interface, if any.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResource.PatchMethod">
+            <summary>
+            PATCH method interface, if any.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResource.IPatchMethod">
+            <summary>
+            iPATCH method interface, if any.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResource.Endpoint">
+            <summary>
+            Endpoint on which the resource is registered.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResource.Notifications">
+            <summary>
+            How notifications are sent, if at all.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResource.Observable">
+            <summary>
+            If the resource is observable.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResource.Title">
+            <summary>
+            Optional title of resource.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResource.ResourceTypes">
+            <summary>
+            Optional resource type.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResource.InterfaceDescriptions">
+            <summary>
+            Optional interface descriptions.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResource.ContentFormats">
+            <summary>
+            Optional array of supported content formats.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResource.MaximumSizeEstimate">
+            <summary>
+            Optional maximum size estimate.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapResource.GetRegistrations">
+            <summary>
+            Gets all active registrations.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapResource.TriggerAll">
+            <summary>
+            Sends data to all registered observers.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapResource.TriggerAll(System.TimeSpan)">
+            <summary>
+            Recurrently triggers resource using a given time interval.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapResource.Trigger(Waher.Networking.CoAP.ObservationRegistration[])">
+            <summary>
+            Sends data to a selected set of registered observers.
+            </summary>
+            <param name="Registrations">Registrations to trigger.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResource.WellKnownCoRE">
+            <summary>
+            If resource should be published through /.well-known/core
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.CoapMethodHandler">
+            <summary>
+            CoAP Method handler.
+            </summary>
+            <param name="Request">Incoming request.</param>
+            <param name="Response">Outgoing response.</param>
+        </member>
+        <member name="T:Waher.Networking.CoAP.CoapResponse">
+            <summary>
+            CoAP response to return to a received request.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapResponse.#ctor(Waher.Networking.CoAP.Transport.ClientBase,Waher.Networking.CoAP.CoapEndpoint,System.Net.IPEndPoint,Waher.Networking.CoAP.CoapMessage,Waher.Networking.CoAP.Notifications,Waher.Networking.CoAP.CoapResource,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            CoAP response to return to a received request.
+            </summary>
+            <param name="Client">Client receiving the response.</param>
+            <param name="Endpoint">CoAP Endpoint.</param>
+            <param name="RemoteEndpoint">Remote endpoint.</param>
+            <param name="Request">Request.</param>
+            <param name="Notifications">How notifications are sent, if at all.</param>
+            <param name="Resource">CoAP resource.</param>
+            <param name="AdditionalResponseOptions">Additional response options.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResponse.Client">
+            <summary>
+            UDP Client through which the message was received.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResponse.Endpoint">
+            <summary>
+            CoAP Endpoint.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResponse.RemoteEndpoint">
+            <summary>
+            Remote endpoint.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResponse.Responded">
+            <summary>
+            If a response has been returned.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResponse.Request">
+            <summary>
+            CoAP request message.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResponse.Notifications">
+            <summary>
+            How notifications are sent, if at all.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResponse.AdditionalResponseOptions">
+            <summary>
+            Additional Response Options
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapResponse.Respond(Waher.Networking.CoAP.CoapCode,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Returns a response to the caller.
+            </summary>
+            <param name="Code">CoAP message code.</param>
+            <param name="Options">Optional options.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapResponse.Respond(Waher.Networking.CoAP.CoapCode,System.Byte[],System.Int32,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Returns a response to the caller.
+            </summary>
+            <param name="Code">CoAP message code.</param>
+            <param name="Payload">Optional payload.</param>
+            <param name="BlockSize">Block size, in case the <paramref name="Payload"/> needs to be divided into blocks.</param>
+            <param name="Options">Optional options.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapResponse.Respond(Waher.Networking.CoAP.CoapCode,System.Byte[],System.Int32,System.Int32,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Returns a response to the caller.
+            </summary>
+            <param name="Code">CoAP message code.</param>
+            <param name="Payload">Optional payload.</param>
+            <param name="Block2Nr">Block index to transmit.</param>
+            <param name="BlockSize">Block size, in case the <paramref name="Payload"/> needs to be divided into blocks.</param>
+            <param name="Options">Optional options.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapResponse.Respond(Waher.Networking.CoAP.CoapCode,System.Object,System.Int32,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Returns a response to the caller.
+            </summary>
+            <param name="Code">CoAP message code.</param>
+            <param name="Payload">Optional payload to be encoded.</param>
+            <param name="BlockSize">Block size, in case the <paramref name="Payload"/> needs to be divided into blocks.</param>
+            <param name="Options">Optional options.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapResponse.RespondAsync(Waher.Networking.CoAP.CoapCode,System.Object,System.Int32,Waher.Networking.CoAP.CoapOption[])">
+            <summary>
+            Returns a response to the caller.
+            </summary>
+            <param name="Code">CoAP message code.</param>
+            <param name="Payload">Optional payload to be encoded.</param>
+            <param name="BlockSize">Block size, in case the <paramref name="Payload"/> needs to be divided into blocks.</param>
+            <param name="Options">Optional options.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapResponse.ACK">
+            <summary>
+            Returns an acknowledgement.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapResponse.ACK(Waher.Networking.CoAP.CoapCode)">
+            <summary>
+            Returns an acknowledgement.
+            </summary>
+            <param name="Code">CoAP message code.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapResponse.RST">
+            <summary>
+            Returns a reset message.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapResponse.RST(Waher.Networking.CoAP.CoapCode)">
+            <summary>
+            Returns a reset message.
+            </summary>
+            <param name="Code">CoAP mesasge code.</param>
+        </member>
+        <member name="T:Waher.Networking.CoAP.CoapResponseEventHandler">
+            <summary>
+            Delegate for CoAP response callbacks
+            </summary>
+            <param name="Sender">Sender of event.</param>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="T:Waher.Networking.CoAP.CoapResponseEventArgs">
+            <summary>
+            Event arguments for CoAP response callbacks.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoapResponseEventArgs.#ctor(Waher.Networking.CoAP.Transport.ClientBase,Waher.Networking.CoAP.CoapEndpoint,System.Boolean,System.Object,Waher.Networking.CoAP.CoapMessage,Waher.Networking.CoAP.CoapResource)">
+            <summary>
+            Event arguments for CoAP response callbacks.
+            </summary>
+            <param name="Client">UDP Client.</param>
+            <param name="Endpoint">CoAP Endpoint.</param>
+            <param name="Ok">If the request was successful or not.</param>
+            <param name="State">State object passed to the original request.</param>
+            <param name="Message">Response message.</param>
+            <param name="Resource">Resource</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResponseEventArgs.Ok">
+            <summary>
+            If the request was successful or not.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoapResponseEventArgs.State">
+            <summary>
+            State object passed to the original request.
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.ContentFormats.Binary">
+            <summary>
+            Binary
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.ContentFormats.Binary.ContentFormatCode">
+            <summary>
+            42
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ContentFormats.Binary.#ctor">
+            <summary>
+            Binary
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ContentFormats.Binary.ContentFormat">
+            <summary>
+            Content format number
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ContentFormats.Binary.ContentType">
+            <summary>
+            Internet content type.
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.ContentFormats.CoreLinkFormat">
+            <summary>
+            CoRE Link Format
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.ContentFormats.CoreLinkFormat.ContentFormatCode">
+            <summary>
+            40
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.ContentFormats.CoreLinkFormat.LinkFormatContentType">
+            <summary>
+            application/link-format
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ContentFormats.CoreLinkFormat.#ctor">
+            <summary>
+            CoRE Link Format
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ContentFormats.CoreLinkFormat.ContentFormat">
+            <summary>
+            Content format number
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ContentFormats.CoreLinkFormat.ContentType">
+            <summary>
+            Internet content type.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ContentFormats.CoreLinkFormat.ContentTypes">
+            <summary>
+            Supported content types.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ContentFormats.CoreLinkFormat.FileExtensions">
+            <summary>
+            Supported file extensions.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ContentFormats.CoreLinkFormat.DecodeAsync(System.String,System.Byte[],System.Text.Encoding,System.Collections.Generic.KeyValuePair{System.String,System.String}[],System.Uri)">
+            <summary>
+            Decodes an object.
+            </summary>
+            <param name="ContentType">Internet Content Type.</param>
+            <param name="Data">Encoded object.</param>
+            <param name="Encoding">Any encoding specified. Can be null if no encoding specified.</param>
+            <param name="Fields">Any content-type related fields and their corresponding values.</param>
+            <param name="BaseUri">Base URI, if any. If not available, value is null.</param>
+            <returns>Decoded object.</returns>
+            <exception cref="T:System.ArgumentException">If the object cannot be decoded.</exception>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ContentFormats.CoreLinkFormat.Decodes(System.String,Waher.Runtime.Inventory.Grade@)">
+            <summary>
+            If the decoder decodes an object with a given content type.
+            </summary>
+            <param name="ContentType">Content type to decode.</param>
+            <param name="Grade">How well the decoder decodes the object.</param>
+            <returns>If the decoder can decode an object with the given type.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ContentFormats.CoreLinkFormat.EncodeAsync(System.Object,System.Text.Encoding,System.String[])">
+            <summary>
+            Encodes an object.
+            </summary>
+            <param name="Object">Object to encode.</param>
+            <param name="Encoding">Desired encoding of text. Can be null if no desired encoding is speified.</param>
+            <param name="AcceptedContentTypes">Optional array of accepted content types. If array is empty, all content types are accepted.</param>
+            <returns>Encoded object, as well as Content Type of encoding. Includes information about any text encodings used.</returns>
+            <exception cref="T:System.ArgumentException">If the object cannot be encoded.</exception>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ContentFormats.CoreLinkFormat.Encodes(System.Object,Waher.Runtime.Inventory.Grade@,System.String[])">
+            <summary>
+            If the encoder encodes a given object.
+            </summary>
+            <param name="Object">Object to encode.</param>
+            <param name="Grade">How well the encoder encodes the object.</param>
+            <param name="AcceptedContentTypes">Optional array of accepted content types. If array is empty, all content types are accepted.</param>
+            <returns>If the encoder can encode the given object.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ContentFormats.CoreLinkFormat.TryGetContentType(System.String,System.String@)">
+            <summary>
+            Tries to get the content type of an item, given its file extension.
+            </summary>
+            <param name="FileExtension">File extension.</param>
+            <param name="ContentType">Content type.</param>
+            <returns>If the extension was recognized.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ContentFormats.CoreLinkFormat.TryGetFileExtension(System.String,System.String@)">
+            <summary>
+            Tries to get the file extension of an item, given its Content-Type.
+            </summary>
+            <param name="ContentType">Content type.</param>
+            <param name="FileExtension">File extension.</param>
+            <returns>If the Content-Type was recognized.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.ContentFormats.Json">
+            <summary>
+            JSON
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.ContentFormats.Json.ContentFormatCode">
+            <summary>
+            50
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ContentFormats.Json.#ctor">
+            <summary>
+            JSON
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ContentFormats.Json.ContentFormat">
+            <summary>
+            Content format number
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ContentFormats.Json.ContentType">
+            <summary>
+            Internet content type.
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.ContentFormats.PlainText">
+            <summary>
+            Plain text
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.ContentFormats.PlainText.ContentFormatCode">
+            <summary>
+            0
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ContentFormats.PlainText.#ctor">
+            <summary>
+            Plain text
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ContentFormats.PlainText.ContentFormat">
+            <summary>
+            Content format number
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ContentFormats.PlainText.ContentType">
+            <summary>
+            Internet content type.
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.ContentFormats.Xml">
+            <summary>
+            XML
+            </summary>
+        </member>
+        <member name="F:Waher.Networking.CoAP.ContentFormats.Xml.ContentFormatCode">
+            <summary>
+            41
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ContentFormats.Xml.#ctor">
+            <summary>
+            XML
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ContentFormats.Xml.ContentFormat">
+            <summary>
+            Content format number
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ContentFormats.Xml.ContentType">
+            <summary>
+            Internet content type.
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.CoRE.CoreResource">
+            <summary>
+            Manages a CoRE resource for an CoAP endpoint.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoRE.CoreResource.#ctor(Waher.Networking.CoAP.CoapEndpoint)">
+            <summary>
+            Manages a CoRE resource for an CoAP endpoint.
+            </summary>
+            <param name="Endpoint">CoAP endpoint.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoRE.CoreResource.AllowsGET">
+            <summary>
+            If the GET method is allowed.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoRE.CoreResource.GET(Waher.Networking.CoAP.CoapMessage,Waher.Networking.CoAP.CoapResponse)">
+            <summary>
+            Executes the GET method on the resource.
+            </summary>
+            <param name="Request">CoAP Request</param>
+            <param name="Response">CoAP Response</param>
+            <exception cref="T:Waher.Networking.CoAP.CoapException">If an error occurred when processing the method.</exception>
+        </member>
+        <member name="T:Waher.Networking.CoAP.CoRE.Link">
+            <summary>
+            CoRE link.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoRE.Link.#ctor(System.Uri)">
+            <summary>
+            CoRE link.
+            </summary>
+            <param name="Uri">URI</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoRE.Link.Uri">
+            <summary>
+            URI of resource.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoRE.Link.RelationTypes">
+            <summary>
+            Relation types, if available, null otherwise.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoRE.Link.Rev">
+            <summary>
+            Rev (?), if available, null otherwise.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoRE.Link.Anchor">
+            <summary>
+            Anchor, if available, null otherwise.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoRE.Link.Language">
+            <summary>
+            Language, if available, null otherwise.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoRE.Link.Media">
+            <summary>
+            Media, if available, null otherwise.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoRE.Link.Title">
+            <summary>
+            Title, if available, null otherwise.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoRE.Link.Type">
+            <summary>
+            Type, if available, null otherwise.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoRE.Link.ResourceTypes">
+            <summary>
+            Resource types, if available, null otherwise.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoRE.Link.InterfaceDescriptions">
+            <summary>
+            Interface descriptions, if available, null otherwise.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoRE.Link.Size">
+            <summary>
+            Size estimate, if available, null otherwise.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoRE.Link.Observable">
+            <summary>
+            If resource is reported to be observable.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoRE.Link.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:Waher.Networking.CoAP.CoRE.LinkDocument">
+            <summary>
+            CoRE Link Document, as defined in RFC 6690: https://tools.ietf.org/html/rfc6690
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoRE.LinkDocument.#ctor(System.String,System.Uri)">
+            <summary>
+            CoRE Link Document, as defined in RFC 6690: https://tools.ietf.org/html/rfc6690
+            </summary>
+            <param name="Text">Text representation of document.</param>
+            <param name="BaseUri">Base URI.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoRE.LinkDocument.Links">
+            <summary>
+            Links in link document.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoRE.LinkDocument.BaseUri">
+            <summary>
+            Base URI
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.CoRE.LinkDocument.Text">
+            <summary>
+            Text representation of document.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.CoRE.LinkDocument.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:Waher.Networking.CoAP.ICoapContentFormat">
+            <summary>
+            Interface for all CoAP content formats.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ICoapContentFormat.ContentFormat">
+            <summary>
+            Content format number
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ICoapContentFormat.ContentType">
+            <summary>
+            Internet content type.
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.ICoapOption">
+            <summary>
+            Interface for all CoAP options.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ICoapOption.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ICoapOption.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ICoapOption.GetValue">
+            <summary>
+            Gets the option value.
+            </summary>
+            <returns>Binary value. Can be null, if option does not have a value.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ICoapOption.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.ICoapDeleteMethod">
+            <summary>
+            DELETE Interface for CoAP resources.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ICoapDeleteMethod.DELETE(Waher.Networking.CoAP.CoapMessage,Waher.Networking.CoAP.CoapResponse)">
+            <summary>
+            Executes the DELETE method on the resource.
+            </summary>
+            <param name="Request">CoAP Request</param>
+            <param name="Response">CoAP Response</param>
+            <exception cref="T:Waher.Networking.CoAP.CoapException">If an error occurred when processing the method.</exception>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ICoapDeleteMethod.AllowsDELETE">
+            <summary>
+            If the DELETE method is allowed.
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.ICoapFetchMethod">
+            <summary>
+            FETCH Interface for CoAP resources.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ICoapFetchMethod.FETCH(Waher.Networking.CoAP.CoapMessage,Waher.Networking.CoAP.CoapResponse)">
+            <summary>
+            Executes the FETCH method on the resource.
+            </summary>
+            <param name="Request">CoAP Request</param>
+            <param name="Response">CoAP Response</param>
+            <exception cref="T:Waher.Networking.CoAP.CoapException">If an error occurred when processing the method.</exception>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ICoapFetchMethod.AllowsFETCH">
+            <summary>
+            If the FETCH method is allowed.
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.ICoapGetMethod">
+            <summary>
+            GET Interface for CoAP resources.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ICoapGetMethod.GET(Waher.Networking.CoAP.CoapMessage,Waher.Networking.CoAP.CoapResponse)">
+            <summary>
+            Executes the GET method on the resource.
+            </summary>
+            <param name="Request">CoAP Request</param>
+            <param name="Response">CoAP Response</param>
+            <exception cref="T:Waher.Networking.CoAP.CoapException">If an error occurred when processing the method.</exception>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ICoapGetMethod.AllowsGET">
+            <summary>
+            If the GET method is allowed.
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.ICoapIPatchMethod">
+            <summary>
+            iPATCH Interface for CoAP resources.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ICoapIPatchMethod.IPATCH(Waher.Networking.CoAP.CoapMessage,Waher.Networking.CoAP.CoapResponse)">
+            <summary>
+            Executes the iPATCH method on the resource.
+            </summary>
+            <param name="Request">CoAP Request</param>
+            <param name="Response">CoAP Response</param>
+            <exception cref="T:Waher.Networking.CoAP.CoapException">If an error occurred when processing the method.</exception>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ICoapIPatchMethod.AllowsIPATCH">
+            <summary>
+            If the iPATCH method is allowed.
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.ICoapPatchMethod">
+            <summary>
+            PATCH Interface for CoAP resources.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ICoapPatchMethod.PATCH(Waher.Networking.CoAP.CoapMessage,Waher.Networking.CoAP.CoapResponse)">
+            <summary>
+            Executes the PATCH method on the resource.
+            </summary>
+            <param name="Request">CoAP Request</param>
+            <param name="Response">CoAP Response</param>
+            <exception cref="T:Waher.Networking.CoAP.CoapException">If an error occurred when processing the method.</exception>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ICoapPatchMethod.AllowsPATCH">
+            <summary>
+            If the PATCH method is allowed.
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.ICoapPostMethod">
+            <summary>
+            POST Interface for CoAP resources.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ICoapPostMethod.POST(Waher.Networking.CoAP.CoapMessage,Waher.Networking.CoAP.CoapResponse)">
+            <summary>
+            Executes the POST method on the resource.
+            </summary>
+            <param name="Request">CoAP Request</param>
+            <param name="Response">CoAP Response</param>
+            <exception cref="T:Waher.Networking.CoAP.CoapException">If an error occurred when processing the method.</exception>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ICoapPostMethod.AllowsPOST">
+            <summary>
+            If the POST method is allowed.
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.ICoapPutMethod">
+            <summary>
+            PUT Interface for CoAP resources.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ICoapPutMethod.PUT(Waher.Networking.CoAP.CoapMessage,Waher.Networking.CoAP.CoapResponse)">
+            <summary>
+            Executes the PUT method on the resource.
+            </summary>
+            <param name="Request">CoAP Request</param>
+            <param name="Response">CoAP Response</param>
+            <exception cref="T:Waher.Networking.CoAP.CoapException">If an error occurred when processing the method.</exception>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ICoapPutMethod.AllowsPUT">
+            <summary>
+            If the PUT method is allowed.
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.ObservationRegistration">
+            <summary>
+            Represents a registration on an observable resource.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ObservationRegistration.#ctor(Waher.Networking.CoAP.Transport.ClientBase,Waher.Networking.CoAP.CoapEndpoint,Waher.Networking.CoAP.CoapMessage)">
+            <summary>
+            Represents a registration on an observable resource.
+            </summary>
+            <param name="Client">UDP Client on which the request was received.</param>
+            <param name="Endpoint">CoAP Endpoint managing the resource.</param>
+            <param name="Request">Request message.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ObservationRegistration.Client">
+            <summary>
+            Client on which the request was received.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ObservationRegistration.Endpoint">
+            <summary>
+            CoAP Endpoint managing the resource.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ObservationRegistration.Request">
+            <summary>
+            Request message.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.ObservationRegistration.SequenceNumber">
+            <summary>
+            Sequence number.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.ObservationRegistration.IncSeqNr">
+            <summary>
+            Increases the sequence number.
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionAccept">
+            <summary>
+            Accept option.
+            
+            Defined in RFC 7252 §5.10.4: 
+            https://tools.ietf.org/html/rfc7252#page-55
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionAccept.#ctor">
+            <summary>
+            Accept option
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionAccept.#ctor(System.UInt64)">
+            <summary>
+            Accept option
+            </summary>
+            <param name="Value">Integer value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionAccept.#ctor(System.Byte[])">
+            <summary>
+            Accept option
+            </summary>
+            <param name="Value">Binary value.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionAccept.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionAccept.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionAccept.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionBlock">
+            <summary>
+            Base class for Block option
+            
+            Defined in RFC 7959: 
+            https://tools.ietf.org/html/rfc7959
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionBlock.#ctor">
+            <summary>
+            Block option
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionBlock.#ctor(System.UInt64)">
+            <summary>
+            Block option
+            </summary>
+            <param name="Value">Integer value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionBlock.#ctor(System.Byte[])">
+            <summary>
+            Block option
+            </summary>
+            <param name="Value">Binary value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionBlock.#ctor(System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            Block option
+            </summary>
+            <param name="Number">Block number.</param>
+            <param name="More">If more blocks are available.</param>
+            <param name="Size">Block size. Must be 16, 32, 64, 128, 256, 512, 1024, or 2048.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionBlock.Number">
+            <summary>
+            Block number.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionBlock.More">
+            <summary>
+            If more blocks are available.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionBlock.Size">
+            <summary>
+            Block size.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionBlock.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionBlock1">
+            <summary>
+            Block1 option
+            
+            Defined in RFC 7959: 
+            https://tools.ietf.org/html/rfc7959
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionBlock1.#ctor">
+            <summary>
+            Block1 option
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionBlock1.#ctor(System.UInt64)">
+            <summary>
+            Block1 option
+            </summary>
+            <param name="Value">Integer value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionBlock1.#ctor(System.Byte[])">
+            <summary>
+            Block1 option
+            </summary>
+            <param name="Value">Binary value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionBlock1.#ctor(System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            Block1 option
+            </summary>
+            <param name="Number">Block number.</param>
+            <param name="More">If more blocks are available.</param>
+            <param name="Size">Block size. Must be 16, 32, 64, 128, 256, 512, 1024, or 2048.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionBlock1.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionBlock1.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionBlock1.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionBlock2">
+            <summary>
+            Block2 option
+            
+            Defined in RFC 7959: 
+            https://tools.ietf.org/html/rfc7959
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionBlock2.#ctor">
+            <summary>
+            Block2 option
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionBlock2.#ctor(System.UInt64)">
+            <summary>
+            Block2 option
+            </summary>
+            <param name="Value">Integer value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionBlock2.#ctor(System.Byte[])">
+            <summary>
+            Block2 option
+            </summary>
+            <param name="Value">Binary value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionBlock2.#ctor(System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            Block2 option
+            </summary>
+            <param name="Number">Block number.</param>
+            <param name="More">If more blocks are available.</param>
+            <param name="Size">Block size. Must be 16, 32, 64, 128, 256, 512, 1024, or 2048.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionBlock2.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionBlock2.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionBlock2.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionContentFormat">
+            <summary>
+            Content-Format option
+            
+            Defined in RFC 7252 §5.10.3: 
+            https://tools.ietf.org/html/rfc7252#page-55
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionContentFormat.#ctor">
+            <summary>
+            Content-Format option
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionContentFormat.#ctor(System.UInt64)">
+            <summary>
+            Content-Format option
+            </summary>
+            <param name="Value">Integer value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionContentFormat.#ctor(System.Byte[])">
+            <summary>
+            Content-Format option
+            </summary>
+            <param name="Value">Binary value.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionContentFormat.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionContentFormat.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionContentFormat.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionEmpty">
+            <summary>
+            Base class for all empty CoAP options.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionEmpty.#ctor">
+            <summary>
+            Base class for all empty CoAP options.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionEmpty.GetValue">
+            <summary>
+            Gets the option value.
+            </summary>
+            <returns>Binary value. Can be null, if option does not have a value.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionETag">
+            <summary>
+            ETag option
+            
+            Defined in RFC 7252 §5.10.6: 
+            https://tools.ietf.org/html/rfc7252#page-56
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionETag.#ctor">
+            <summary>
+            ETag option
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionETag.#ctor(System.Byte[])">
+            <summary>
+            ETag option
+            </summary>
+            <param name="Value">Opaque value.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionETag.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionETag.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionETag.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionIfMatch">
+            <summary>
+            If-Match option
+            
+            Defined in RFC 7252 §5.10.8.1: 
+            https://tools.ietf.org/html/rfc7252#page-56
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionIfMatch.#ctor">
+            <summary>
+            If-Match option
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionIfMatch.#ctor(System.Byte[])">
+            <summary>
+            If-Match option
+            </summary>
+            <param name="Value">Opaque value.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionIfMatch.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionIfMatch.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionIfMatch.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionIfNoneMatch">
+            <summary>
+            If-None-Match option
+            
+            Defined in RFC 7252 §5.10.8.1: 
+            https://tools.ietf.org/html/rfc7252#page-56
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionIfNoneMatch.#ctor">
+            <summary>
+            If-NoneMatch option
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionIfNoneMatch.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionIfNoneMatch.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionIfNoneMatch.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionKeyValue">
+            <summary>
+            Uri-Query option
+            
+            Defined in RFC 7252 §5.10.1: 
+            https://tools.ietf.org/html/rfc7252#page-52
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionKeyValue.#ctor">
+            <summary>
+            Uri-Query option
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionKeyValue.#ctor(System.String)">
+            <summary>
+            Uri-Query option
+            </summary>
+            <param name="Value">String value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionKeyValue.#ctor(System.Byte[])">
+            <summary>
+            Uri-Query option
+            </summary>
+            <param name="Value">Binary value.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionKeyValue.Key">
+            <summary>
+            Key name.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionKeyValue.KeyValue">
+            <summary>
+            Key value.
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionLocationPath">
+            <summary>
+            Location-Path option
+            
+            Defined in RFC 7252 §5.10.7: 
+            https://tools.ietf.org/html/rfc7252#page-57
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionLocationPath.#ctor">
+            <summary>
+            Location-Path option
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionLocationPath.#ctor(System.String)">
+            <summary>
+            Location-Path option
+            </summary>
+            <param name="Value">String value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionLocationPath.#ctor(System.Byte[])">
+            <summary>
+            Location-Path option
+            </summary>
+            <param name="Value">Binary value.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionLocationPath.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionLocationPath.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionLocationPath.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionLocationQuery">
+            <summary>
+            Location-Query option
+            
+            Defined in RFC 7252 §5.10.7: 
+            https://tools.ietf.org/html/rfc7252#page-57
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionLocationQuery.#ctor">
+            <summary>
+            Location-Query option
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionLocationQuery.#ctor(System.String)">
+            <summary>
+            Location-Query option
+            </summary>
+            <param name="Value">String value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionLocationQuery.#ctor(System.Byte[])">
+            <summary>
+            Location-Query option
+            </summary>
+            <param name="Value">Binary value.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionLocationQuery.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionLocationQuery.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionLocationQuery.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionMaxAge">
+            <summary>
+            Max-Age option
+            
+            Defined in RFC 7252 §5.10.5: 
+            https://tools.ietf.org/html/rfc7252#page-54
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionMaxAge.#ctor">
+            <summary>
+            Max-Age option
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionMaxAge.#ctor(System.UInt64)">
+            <summary>
+            Max-Age option
+            </summary>
+            <param name="Value">Integer value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionMaxAge.#ctor(System.Byte[])">
+            <summary>
+            Max-Age option
+            </summary>
+            <param name="Value">Binary value.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionMaxAge.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionMaxAge.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionMaxAge.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionObserve">
+            <summary>
+            Observe option
+            
+            Defined in RFC 7641: 
+            https://tools.ietf.org/html/rfc7641
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionObserve.#ctor">
+            <summary>
+            Observe option
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionObserve.#ctor(System.UInt64)">
+            <summary>
+            Observe option
+            </summary>
+            <param name="Value">Integer value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionObserve.#ctor(System.Byte[])">
+            <summary>
+            Observe option
+            </summary>
+            <param name="Value">Binary value.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionObserve.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionObserve.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionObserve.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionOpaque">
+            <summary>
+            Base class for all opaque CoAP options.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionOpaque.#ctor">
+            <summary>
+            Base class for all opaque CoAP options.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionOpaque.#ctor(System.Byte[])">
+            <summary>
+            Base class for all opaque CoAP options.
+            </summary>
+            <param name="Value">Opaque option value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionOpaque.GetValue">
+            <summary>
+            Gets the option value.
+            </summary>
+            <returns>Binary value. Can be null, if option does not have a value.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionOpaque.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionProxyScheme">
+            <summary>
+            Proxy-Scheme option
+            
+            Defined in RFC 7252 §5.10.2: 
+            https://tools.ietf.org/html/rfc7252#page-53
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionProxyScheme.#ctor">
+            <summary>
+            Proxy-Scheme option
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionProxyScheme.#ctor(System.String)">
+            <summary>
+            Proxy-Scheme option
+            </summary>
+            <param name="Value">String value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionProxyScheme.#ctor(System.Byte[])">
+            <summary>
+            Proxy-Scheme option
+            </summary>
+            <param name="Value">Binary value.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionProxyScheme.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionProxyScheme.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionProxyScheme.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionProxyUri">
+            <summary>
+            Proxy-Uri option
+            
+            Defined in RFC 7252 §5.10.2: 
+            https://tools.ietf.org/html/rfc7252#page-53
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionProxyUri.#ctor">
+            <summary>
+            Proxy-Uri option
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionProxyUri.#ctor(System.String)">
+            <summary>
+            Proxy-Uri option
+            </summary>
+            <param name="Value">String value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionProxyUri.#ctor(System.Byte[])">
+            <summary>
+            Proxy-Uri option
+            </summary>
+            <param name="Value">Binary value.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionProxyUri.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionProxyUri.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionProxyUri.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionSize1">
+            <summary>
+            Size1 option
+            
+            Defined in RFC 7252 §5.10.9: 
+            https://tools.ietf.org/html/rfc7252#page-59
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionSize1.#ctor">
+            <summary>
+            Size1 option
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionSize1.#ctor(System.UInt64)">
+            <summary>
+            Size1 option
+            </summary>
+            <param name="Value">Integer value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionSize1.#ctor(System.Byte[])">
+            <summary>
+            Size1 option
+            </summary>
+            <param name="Value">Binary value.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionSize1.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionSize1.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionSize1.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionSize2">
+            <summary>
+            Size2 option
+            
+            Defined in RFC 7959: 
+            https://tools.ietf.org/html/rfc7959
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionSize2.#ctor">
+            <summary>
+            Size2 option
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionSize2.#ctor(System.UInt64)">
+            <summary>
+            Size2 option
+            </summary>
+            <param name="Value">Integer value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionSize2.#ctor(System.Byte[])">
+            <summary>
+            Size2 option
+            </summary>
+            <param name="Value">Binary value.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionSize2.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionSize2.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionSize2.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionString">
+            <summary>
+            Base class for all string-valued CoAP options.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionString.#ctor">
+            <summary>
+            Base class for all string-valued CoAP options.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionString.#ctor(System.String)">
+            <summary>
+            Base class for all string-valued CoAP options.
+            </summary>
+            <param name="Value">String value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionString.#ctor(System.Byte[])">
+            <summary>
+            Base class for all string-valued CoAP options.
+            </summary>
+            <param name="Value">Binary value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionString.GetValue">
+            <summary>
+            Gets the option value.
+            </summary>
+            <returns>Binary value. Can be null, if option does not have a value.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionString.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionString.Value">
+            <summary>
+            String value.
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionUInt">
+            <summary>
+            Base class for all uint-valued CoAP options.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUInt.#ctor">
+            <summary>
+            Base class for all uint-valued CoAP options.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUInt.#ctor(System.UInt64)">
+            <summary>
+            Base class for all uint-valued CoAP options.
+            </summary>
+            <param name="Value">Integer value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUInt.#ctor(System.Byte[])">
+            <summary>
+            Base class for all uint-valued CoAP options.
+            </summary>
+            <param name="Value">Binary value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUInt.GetValue">
+            <summary>
+            Gets the option value.
+            </summary>
+            <returns>Binary value. Can be null, if option does not have a value.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUInt.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionUInt.Value">
+            <summary>
+            Integer value.
+            </summary>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionUnknown">
+            <summary>
+            Unknown CoAP option.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUnknown.#ctor">
+            <summary>
+            Unknown CoAP option.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUnknown.#ctor(System.Int32,System.Byte[],System.Boolean)">
+            <summary>
+            Unknown CoAP option.
+            </summary>
+            <param name="Nr">CoAP option number.</param>
+            <param name="Value">CoAP option value.</param>
+            <param name="Critical">If the option is critical or not.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionUnknown.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionUnknown.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUnknown.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUnknown.GetValue">
+            <summary>
+            Gets the option value.
+            </summary>
+            <returns>Binary value. Can be null, if option does not have a value.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionUriHost">
+            <summary>
+            Uri-Host option
+            
+            Defined in RFC 7252 §5.10.1: 
+            https://tools.ietf.org/html/rfc7252#page-52
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUriHost.#ctor">
+            <summary>
+            Uri-Host option
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUriHost.#ctor(System.String)">
+            <summary>
+            Uri-Host option
+            </summary>
+            <param name="Value">String value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUriHost.#ctor(System.Byte[])">
+            <summary>
+            Uri-Host option
+            </summary>
+            <param name="Value">Binary value.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionUriHost.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionUriHost.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUriHost.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionUriPath">
+            <summary>
+            Uri-Path option
+            
+            Defined in RFC 7252 §5.10.1: 
+            https://tools.ietf.org/html/rfc7252#page-52
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUriPath.#ctor">
+            <summary>
+            Uri-Path option
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUriPath.#ctor(System.String)">
+            <summary>
+            Uri-Path option
+            </summary>
+            <param name="Value">String value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUriPath.#ctor(System.Byte[])">
+            <summary>
+            Uri-Path option
+            </summary>
+            <param name="Value">Binary value.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionUriPath.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionUriPath.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUriPath.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionUriPort">
+            <summary>
+            Uri-Port option
+            
+            Defined in RFC 7252 §5.10.1: 
+            https://tools.ietf.org/html/rfc7252#page-52
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUriPort.#ctor">
+            <summary>
+            Uri-Port option
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUriPort.#ctor(System.UInt64)">
+            <summary>
+            Uri-Port option
+            </summary>
+            <param name="Value">Integer value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUriPort.#ctor(System.Byte[])">
+            <summary>
+            Uri-Port option
+            </summary>
+            <param name="Value">Binary value.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionUriPort.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionUriPort.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUriPort.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+        <member name="T:Waher.Networking.CoAP.Options.CoapOptionUriQuery">
+            <summary>
+            Uri-Query option
+            
+            Defined in RFC 7252 §5.10.1: 
+            https://tools.ietf.org/html/rfc7252#page-52
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUriQuery.#ctor">
+            <summary>
+            Uri-Query option
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUriQuery.#ctor(System.String)">
+            <summary>
+            Uri-Query option
+            </summary>
+            <param name="Value">String value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUriQuery.#ctor(System.String,System.String)">
+            <summary>
+            Uri-Query option
+            </summary>
+            <param name="Name">Parameter name.</param>
+            <param name="Value">Parameter value.</param>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUriQuery.#ctor(System.Byte[])">
+            <summary>
+            Uri-Query option
+            </summary>
+            <param name="Value">Binary value.</param>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionUriQuery.Critical">
+            <summary>
+            If the option is critical or not. Messages containing critical options that are not processed, must be discarded.
+            </summary>
+        </member>
+        <member name="P:Waher.Networking.CoAP.Options.CoapOptionUriQuery.OptionNumber">
+            <summary>
+            Option number.
+            </summary>
+        </member>
+        <member name="M:Waher.Networking.CoAP.Options.CoapOptionUriQuery.Create(System.Byte[])">
+            <summary>
+            Creates a new CoAP option.
+            </summary>
+            <param name="Value">Option value.</param>
+            <returns>Newly created CoAP option.</returns>
+        </member>
+    </members>
+</doc>

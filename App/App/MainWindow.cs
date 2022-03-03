@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Timers;
 using Gtk;
 using OpenTeleprompter.APIs.CoAP;
@@ -125,7 +126,7 @@ public partial class MainWindow : Gtk.Window
             dr.State.ScrollY = sy;
         };
 
-        new MyServer();
+        var server = new MyServer(8080);
     }
 
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)
@@ -147,7 +148,12 @@ public class MyServer : CoAPServer
 
 public class MyResource : CoAPResource
 {
-    public MyResource() : base(new Uri(""))
+    public MyResource() : base(new Uri("/hello"))
+    {
+    }
+
+    [CoAPGetMethod]
+    public async Task Get()
     {
     }
 }

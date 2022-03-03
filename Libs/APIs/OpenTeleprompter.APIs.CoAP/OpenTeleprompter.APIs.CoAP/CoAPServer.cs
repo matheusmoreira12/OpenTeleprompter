@@ -43,6 +43,8 @@ namespace OpenTeleprompter.APIs.CoAP
 
         private void AssignAndInitializeEndpoint()
         {
+            InterfaceLayer.InventoryInitializer.Initialize();
+
             EndPoint = new Waher.Networking.CoAP.CoapEndpoint(Ports, null, null, null, false, false);
 
             foreach (var resource in Resources)

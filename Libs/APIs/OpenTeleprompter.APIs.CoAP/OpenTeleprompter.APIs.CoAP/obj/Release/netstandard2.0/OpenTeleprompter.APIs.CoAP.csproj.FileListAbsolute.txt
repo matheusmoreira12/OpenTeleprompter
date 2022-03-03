@@ -6,3 +6,4 @@
 /home/fortes/Projects/OpenTeleprompter/Libs/APIs/OpenTeleprompter.APIs.CoAP/OpenTeleprompter.APIs.CoAP/obj/Release/netstandard2.0/OpenTeleprompter.APIs.CoAP.csproj.CoreCompileInputs.cache
 /home/fortes/Projects/OpenTeleprompter/Libs/APIs/OpenTeleprompter.APIs.CoAP/OpenTeleprompter.APIs.CoAP/obj/Release/netstandard2.0/OpenTeleprompter.APIs.CoAP.dll
 /home/fortes/Projects/OpenTeleprompter/Libs/APIs/OpenTeleprompter.APIs.CoAP/OpenTeleprompter.APIs.CoAP/obj/Release/netstandard2.0/OpenTeleprompter.APIs.CoAP.pdb
+/home/fortes/Projects/OpenTeleprompter/Libs/APIs/OpenTeleprompter.APIs.CoAP/OpenTeleprompter.APIs.CoAP/obj/Release/netstandard2.0/OpenTeleprompter.APIs.CoAP.csprojAssemblyReference.cache
